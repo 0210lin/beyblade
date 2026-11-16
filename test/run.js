@@ -59,6 +59,15 @@ ok('3-60解釋', /3 凸刃/.test(run('3-60解釋')));
 ok('未收錄固鎖輪走通用規則', /2-70/.test(run('2-70 解釋')));
 ok('找不到有建議', /找不到/.test(run('完全不存在的東西配置')));
 
+console.log('— 台灣用法 / 編號');
+ok('惡魔 → Hells 三顆', p('惡魔配置').parts[0].ids.length === 3);
+ok('惡魔紅鐮 → Hells Scythe', p('惡魔紅鐮解釋').parts[0].ids[0] === 'hells_scythe');
+ok('BX-01 → Dran Sword', p('BX-01 解釋').parts[0].ids[0] === 'dran_sword');
+ok('bx01 小寫黏字', p('bx01配置').parts[0].ids[0] === 'dran_sword');
+ok('UX-01 → Dran Buster', p('ux-01解釋').parts[0].ids[0] === 'dran_buster');
+ok('魔導幻箭 / 騎士重盾 / 雄獅獵爪', ['魔導幻箭', '騎士重盾', '雄獅獵爪'].every((t) => p(t + '解釋').parts.length === 1));
+ok('未收錄解析的戰刃有回覆', /Samurai Calibur/.test(run('BX-45 解釋')));
+
 console.log('— 簽名驗證');
 const { validSignature } = require('../api/webhook');
 const body = Buffer.from('{"events":[]}');
