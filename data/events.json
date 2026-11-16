@@ -223,6 +223,29 @@
    "map": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1fun%20%E6%96%B0%E5%8C%97%E5%B8%82%E6%9D%BF%E6%A9%8B%E5%8D%80%E9%9B%A8%E8%BE%B2%E8%B7%AF8%E8%99%9F"
   },
   {
+   "date": "2026-11-20",
+   "name": "野鳥突襲｜三峽老街（WBA 挑戰賽）",
+   "venue": "三峽老街－台灣檜木館",
+   "address": "新北市三峽區三峽老街",
+   "time": "20:30",
+   "checkin": "19:30",
+   "fee": "一般350・雙北/桃園300・出示野鳥盃參賽照280・12歲以下250",
+   "cap": 48,
+   "divisions": [
+    "公開組",
+    "通常組"
+   ],
+   "reg": "填表報名",
+   "link": "https://forms.gle/uVNUMo2xKKCt91sc6",
+   "note": "野鳥陀螺協會 WBA 主辦；依報名人數取名次（16人取冠軍…48人取前四名）",
+   "city": "新北市",
+   "district": "三峽區",
+   "kind": "tournament",
+   "source": "FB 台灣戰鬥陀螺賽事聚會交流平台",
+   "source_url": "https://www.facebook.com/groups/142568699573430/",
+   "map": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E5%B3%BD%E8%80%81%E8%A1%97%EF%BC%8D%E5%8F%B0%E7%81%A3%E6%AA%9C%E6%9C%A8%E9%A4%A8%20%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E5%B3%BD%E5%8D%80%E4%B8%89%E5%B3%BD%E8%80%81%E8%A1%97"
+  },
+  {
    "date": "2026-11-21",
    "name": "CardMaster",
    "venue": "CardMaster",

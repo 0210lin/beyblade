@@ -90,6 +90,10 @@ FB_EVENTS = [
     dict(date="2026-11-18", name="BINGO盃 第八屆", venue="樹林興仁花園夜市 攤位I33", address="新北市樹林區興仁花園夜市",
          time="19:30", checkin="19:00", fee="300（續命250，限一次）", cap=24, divisions=["公開組"],
          reg="填表報名", link="", note="滿16人開賽、上限24人"),
+    dict(date="2026-11-20", name="野鳥突襲｜三峽老街（WBA 挑戰賽）", venue="三峽老街－台灣檜木館", address="新北市三峽區三峽老街",
+         time="20:30", checkin="19:30", fee="一般350・雙北/桃園300・出示野鳥盃參賽照280・12歲以下250", cap=48, divisions=["公開組", "通常組"],
+         reg="填表報名", link="https://forms.gle/uVNUMo2xKKCt91sc6",
+         note="野鳥陀螺協會 WBA 主辦；依報名人數取名次（16人取冠軍…48人取前四名）"),
     # 東fun：海報圖片內容（11/18 三、11/20 五、11/21 六，每天三場）
     *[dict(date=d, name="東fun 11月賽事", venue="東fun", address="新北市板橋區雨農路8號",
            time="19:00／20:40／22:00", checkin="", fee="雙人賽1000/組・限定賽600・例行賽300", cap=None, divisions=["公開組"],
