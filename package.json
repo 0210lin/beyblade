@@ -1,0 +1,12 @@
+{
+  "name": "beyblade-line-bot",
+  "version": "1.0.0",
+  "description": "Beyblade X 賽事配置爬蟲 + LINE 群組查詢機器人（全免費架構）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/run.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

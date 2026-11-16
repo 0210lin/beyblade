@@ -1,0 +1,24 @@
+{
+  "_說明": "type: feed=RSS/Atom、reddit_oauth=Reddit 官方 API（需 Secrets）、html=單一網頁。enabled:false 可暫停來源。任何來源失敗都不會影響其他來源。新增來源只要加一個物件。",
+  "sources": [
+    {
+      "name": "Reddit r/BeybladeX（官方 API）",
+      "type": "reddit_oauth",
+      "subreddit": "BeybladeX",
+      "queries": ["tournament results", "top cut", "winning combo", "tournament winner"],
+      "enabled": true
+    },
+    {
+      "name": "Reddit r/BeybladeX（RSS）",
+      "type": "feed",
+      "url": "https://www.reddit.com/r/BeybladeX/search.rss?q=tournament+results&restrict_sr=on&sort=new&t=month",
+      "enabled": true
+    },
+    {
+      "name": "WBO 論壇（RSS，請自行填入實際 feed 網址）",
+      "type": "feed",
+      "url": "https://worldbeyblade.org/syndication.php?type=atom1.0&limit=40",
+      "enabled": true
+    }
+  ]
+}

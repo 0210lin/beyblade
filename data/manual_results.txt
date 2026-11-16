@@ -1,0 +1,12 @@
+# 手動貼賽果（爬蟲每次執行都會一併讀取）。區塊之間用單獨一行 --- 分隔。
+# 以 # 開頭的行不影響解析（但請把整個範例區塊刪掉或改成真實賽事）。
+#
+# 範例：
+# ---
+# event: 台北盃 #12
+# date: 2026-11-09
+# url: https://example.com/result
+# 1st: Shark Edge 3-60LF
+# 2nd: Wizard Rod 9-60B
+# 3rd: Phoenix Wing 9-60GF
+# ---
