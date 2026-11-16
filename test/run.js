@@ -33,7 +33,7 @@ ok('鯊魚配置 → blade+combo', p('鯊魚配置').mode === 'combo' && p('鯊�
 ok('魔導神杖 配置（有空白）', p('魔導神杖 配置').parts[0].ids[0] === 'wizard_rod');
 ok('9-60 配置 → ratchet', p('9-60 配置').parts[0].kind === 'ratchet');
 ok('H軸 解釋 → bit H', p('H軸 解釋').parts[0].ids[0] === 'H' && p('H軸 解釋').mode === 'wiki');
-ok('龍劍 → 三顆龍系', p('龍劍解釋').parts[0].ids.length === 3);
+
 ok('黏字 鯊魚lf配置', (() => { const q = p('鯊魚lf配置'); return q.parts.some((x) => x.kind === 'bit' && x.ids[0] === 'LF') && q.parts.some((x) => x.kind === 'blade'); })());
 ok('錯字 鯊玉配置 → 模糊比對', p('鯊玉配置').parts[0]?.ids[0] === 'shark_edge');
 ok('英文 wizard rod', p('wizard rod 配置').parts[0].ids[0] === 'wizard_rod');
@@ -82,6 +82,21 @@ console.log(w);
 ok('解釋含【資料】編號', /【資料】編號 BX-14・右旋/.test(w));
 ok('左旋戰刃註記', /左旋/.test(run('蒼穹龍騎士解釋')));
 ok('一體戰刃註記', /一體成型/.test(run('UX-19 解釋')));
+
+console.log('— CX 系列');
+const cxIds = (t) => p(t).parts.filter((x) => x.kind === 'cx').flatMap((x) => x.ids);
+ok('J輔助 → assist_j', cxIds('J輔助解釋')[0] === 'assist_j');
+ok('輔助W → assist_w', cxIds('輔助W解釋')[0] === 'assist_w');
+ok('斜切輔助戰刃', cxIds('斜切輔助戰刃解釋')[0] === 'assist_j');
+ok('蒼龍紋章', cxIds('蒼龍紋章解釋')[0] === 'chip_dran');
+ok('CX-14 → 騎士堡壘', cxIds('CX-14 解釋')[0] === 'cx_14');
+ok('龍劍 含 蒼龍神劍/蒼龍爆刃', p('龍劍解釋').parts[0].ids.includes('dran_sword') && p('龍劍解釋').parts[0].ids.includes('dran_buster'));
+ok('勇氣龍 → CX-01', cxIds('勇氣龍解釋')[0] === 'cx_01');
+ok('CX 配置不爆錯', /沒有賽事配置統計/.test(run('J輔助配置')));
+const cxo = run('CX-13 解釋');
+console.log(cxo);
+ok('CX 整組解釋含組成', /組成：龍王紋章/.test(cxo));
+ok('BX-01 仍是蒼龍神劍', p('BX-01 解釋').parts[0].ids[0] === 'dran_sword');
 
 console.log('— 簽名驗證');
 const { validSignature } = require('../api/webhook');
