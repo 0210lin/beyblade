@@ -292,8 +292,103 @@ def extract(post: dict, matcher: Matcher, source_name: str):
     return out
 
 
+HUB_SOURCE = "beybladehub.app/combos"
+HUB_URL = "https://beybladehub.app/combos"
+
+
+def make_resolver(dictionary: dict):
+    """零件名稱 → ('blade', id) / ('cx', id) / None。先比對完整名稱，再比對名稱中含有的最長別名。"""
+    entries = []
+    for bid, b in dictionary["blades"].items():
+        for nm in [b["zh"], b["en"], *[a for a in b.get("aliases", []) if len(a) >= 3 and re.search(r"[一-鿿]", a)]]:
+            entries.append((re.sub(r"\s+", "", nm).lower(), "blade", bid))
+    for cid, c in dictionary.get("cx", {}).items():
+        if c.get("role") == "product":
+            entries.append((re.sub(r"\s+", "", c["zh"]).lower(), "cx", cid))
+    exact = {}
+    for k, kind, i in entries:
+        exact.setdefault(k, (kind, i))
+    entries.sort(key=lambda e: len(e[0]), reverse=True)
+
+    def resolve(name: str):
+        n = re.sub(r"\s+", "", name).lower()
+        if n in exact:
+            return exact[n]
+        for k, kind, i in entries:
+            if len(k) >= 3 and k in n:
+                return kind, i
+        return None
+    return resolve
+
+
+def hub_to_data(hub: dict, dictionary: dict, today: dt.date):
+    """beybladehub.app/combos 的解析結果 → (賽事配置 list, 推薦配置 dict, T 表 dict)"""
+    resolve = make_resolver(dictionary)
+    fallback_date = (hub.get("updated") or "").replace("/", "-")
+    fallback_date = f"{fallback_date}-01" if re.fullmatch(r"\d{4}-\d{2}", fallback_date) else today.isoformat()
+    combos, recommended = [], {}
+    for card in hub["cards"]:
+        res = resolve(card["zh"])
+        key = res[1] if res and res[0] == "blade" else ("cx:" + card["zh"] if card["series"] == "CX" else None)
+        if key and (card["tips"] or card["common_ratchets"] or card["common_bits"]):
+            recommended[key] = {"zh": card["zh"], "series": card["series"], "tips": card["tips"],
+                                "common_ratchets": card["common_ratchets"], "common_bits": card["common_bits"]}
+        for r in card["results"]:
+            rr = resolve(r["name"])
+            rb = r["ratchet"]
+            label = dictionary["blades"][rr[1]]["en"] if rr and rr[0] == "blade" else (dictionary["cx"][rr[1]]["zh"] if rr and rr[0] == "cx" else r["name"])
+            c = {
+                "blade": rr[1] if rr and rr[0] == "blade" else None, "ratchet": rb, "bit": r["bit"],
+                "combo": f"{label} {rb}{r['bit']}".replace("  ", " ").strip(),
+                "rank": r["rank"], "division": r["division"] or None, "event": r["event"] or "（賽事名稱未載）",
+                "date": r["date"] or fallback_date, "source": HUB_SOURCE, "url": HUB_URL,
+            }
+            if rr and rr[0] == "cx":
+                c["cx"] = rr[1]
+            if c["blade"] is None:
+                c["cx_label"] = r["name"]
+            if r["player"]:
+                c["player"] = r["player"]
+            if r["level"]:
+                c["level"] = r["level"]
+            if r["n"] > 1:
+                c["n"] = r["n"]
+            combos.append(c)
+    tier = dict(hub.get("tier") or {})
+    tier["updated"] = hub.get("updated", "")
+    return combos, recommended, tier
+
+
+def unify_events(items: list) -> None:
+    """同一天、場地關鍵字相同的賽事，把 /combos 來源的賽事名稱與連結換成手動輸入那筆（連結較具體）。"""
+    ev = {}
+    for c in items:
+        if c.get("source") != HUB_SOURCE:
+            ev.setdefault(c["date"], {})[c["event"]] = c["url"]
+    for c in items:
+        if c.get("source") == HUB_SOURCE and c["date"] in ev:
+            toks = [t for t in re.split(r"[（）()・\s·]+", c["event"]) if len(t) >= 3]
+            for name, url in ev[c["date"]].items():
+                if any(t in name for t in toks):
+                    c["event"], c["url"] = name, url
+                    break
+
+
+def dedupe_cross_source(items: list) -> list:
+    """同一場同名次同配置，若手動輸入／其他來源已有（連結較具體），就丟掉 beybladehub /combos 那筆。"""
+    def key2(c):
+        return (c.get("blade") or c.get("cx_label"), c.get("ratchet"), c.get("bit"), c.get("rank"), c.get("date"), c.get("division") or "")
+    best = {}
+    for c in items:
+        k = key2(c)
+        if k not in best or (best[k].get("source") == HUB_SOURCE and c.get("source") != HUB_SOURCE):
+            best[k] = c
+    keep = {id(c) for c in best.values()}
+    return [c for c in items if id(c) in keep]
+
+
 def ident(c: dict):
-    return (c["blade"], c["ratchet"], c["bit"], c.get("rank"), c.get("division"), c.get("url") or c.get("event"), c["date"])
+    return (c.get("blade") or c.get("cx_label"), c["ratchet"], c["bit"], c.get("rank"), c.get("division"), c.get("url") or c.get("event"), c["date"], c.get("event"))
 
 
 def merge(old: list, new: list, today: dt.date):
@@ -308,6 +403,8 @@ def merge(old: list, new: list, today: dt.date):
     items = list(merged.values())
     if len(real) >= MIN_REAL_TO_DROP_SEED:
         items = real  # 真實資料夠了，移除示範資料
+    unify_events(items)
+    items = dedupe_cross_source(items)
     items.sort(key=lambda c: (c["date"], c["combo"]), reverse=True)
     return items[:MAX_COMBOS], added
 
@@ -345,13 +442,37 @@ def main() -> int:
     print(f"抽出配置 {len(new)} 筆（來源成功 {ok_sources}，失敗 {len(errors)}）")
 
     old_doc = json.loads(COMBOS_PATH.read_text(encoding="utf-8")) if COMBOS_PATH.exists() else {"combos": []}
-    if not new:
+    today = dt.datetime.now(dt.timezone.utc).date()
+
+    # beybladehub.app/combos：賽場配置 + 社群推薦 + 高手 T 表（每次整批重建；抓失敗就沿用舊的）
+    recommended, tier = old_doc.get("recommended", {}), old_doc.get("tier", {})
+    hub_items, hub_ok = [], False
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import hub_combos
+        hub = hub_combos.fetch_all()
+        hc, rec, tr = hub_to_data(hub, dictionary, today)
+        if len(hc) >= 20 and rec:  # 防呆：解析結果太少 = 頁面改版，不採用
+            hub_items, recommended, tier, hub_ok = hc, rec, tr, True
+            print(f"[ok]   beybladehub.app/combos: 賽場配置 {len(hc)} 筆、推薦 {len(rec)} 顆、T 表 {sum(len(v) for v in tr.values() if isinstance(v, list))} 項")
+        else:
+            print(f"[warn] beybladehub.app/combos 解析結果異常少（{len(hc)} 筆），沿用舊資料", file=sys.stderr)
+    except Exception as e:
+        print(f"[fail] beybladehub.app/combos: {e}", file=sys.stderr)
+
+    old_items = [c for c in old_doc.get("combos", []) if not (hub_ok and c.get("source") == HUB_SOURCE)]
+    if not new and not hub_ok:
         print("沒有抓到新資料，保留舊的 combos.json，不做變更。")
         return 0  # 防呆：不清空
 
-    today = dt.datetime.now(dt.timezone.utc).date()
-    items, added = merge(old_doc.get("combos", []), new, today)
-    doc = {"updated_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "count": len(items), "combos": items}
+    items, added = merge(old_items, new + hub_items, today)
+    doc = {"updated_at": old_doc.get("updated_at", ""), "count": len(items), "combos": items,
+           "recommended": recommended, "tier": tier}
+    changed = any(doc[k] != old_doc.get(k) for k in ("combos", "recommended", "tier"))
+    if not changed:
+        print(f"combos 沒有變化（{len(items)} 筆）")
+        return 0
+    doc["updated_at"] = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     COMBOS_PATH.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"寫入 {len(items)} 筆（新增 {added}）")
     return 0

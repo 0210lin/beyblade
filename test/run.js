@@ -122,6 +122,19 @@ ok('賽事 Flex 合法', (() => {
   return !bad && JSON.stringify(out.flex).includes('"type":"uri"') && !/undefined|null/.test(JSON.stringify(out.flex));
 })());
 
+console.log('— T 表 / 社群推薦 / beybladehub 賽場配置');
+const tr = handleRich('T表', data, {});
+ok('T表 → 圖片回覆', tr.image === 'tier' && /上蓋/.test(tr.text) && /鮫鯊狂鱗/.test(tr.text));
+ok('大小寫與別名：tier / t 表 / 強度排行', ['tier', 't 表', '強度排行', 'Ｔ表'].every((q) => handleRich(q, data, {}).image === 'tier'));
+ok('T表資料來自高手評級', data.tier && data.tier.experts >= 1 && data.tier.blades.length > 5 && data.tier.bits.length > 3);
+const sh = run('鯊魚配置');
+ok('配置含社群推薦', /社群推薦/.test(sh) && /常用固鎖/.test(sh));
+ok('配置含 beybladehub 賽場來源', data.combos.some((c) => c.source === 'beybladehub.app/combos'));
+ok('殿軍（第 4 名）可顯示', data.combos.some((c) => c.rank === 4) && /殿軍/.test(run('鯊魚配置') + run('蒼穹龍騎士配置')));
+ok('只有推薦沒有賽果的零件也能回覆', /社群推薦/.test(run('鋒鰭配置')) && !/找不到/.test(run('鋒鰭配置')));
+ok('G3／民間賽事有選手欄位', data.combos.some((c) => c.player));
+ok('同一場賽事不重複列兩次', (() => { const t = run('鯊魚配置'); return (t.match(/高雄夢時代/g) || []).length === 1; })());
+
 console.log('— CX 系列');
 const cxIds = (t) => p(t).parts.filter((x) => x.kind === 'cx').flatMap((x) => x.ids);
 ok('J輔助 → assist_j', cxIds('J輔助解釋')[0] === 'assist_j');

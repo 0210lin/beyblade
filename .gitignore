@@ -3,3 +3,7 @@ node_modules/
 .env
 __pycache__/
 *.pyc
+
+# 專案根目錄的圖片（封面／大頭貼原圖）不進版控；機器人用的 data/tier.png 例外
+/*.png
+/*.jpg

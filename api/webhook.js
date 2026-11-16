@@ -35,10 +35,28 @@ async function pushReply(replyToken, messages, token) {
   return res.ok;
 }
 
-/** 優先送 Flex 卡片（好讀、賽事連結可點）；LINE 拒絕時退回純文字 */
-async function reply(replyToken, content, token) {
-  const { text, flex } = typeof content === 'string' ? { text: content } : content;
+/** T 表圖片網址：預設用 GitHub Raw 上由排程產生的 data/tier.png */
+function tierImageUrl(env, tier) {
+  const base = env.TIER_IMAGE_URL
+    || (env.GITHUB_REPO ? `https://raw.githubusercontent.com/${env.GITHUB_REPO}/${env.GITHUB_BRANCH || 'main'}/data/tier.png` : '');
+  return base ? `${base}${base.includes('?') ? '&' : '?'}v=${encodeURIComponent((tier && tier.updated) || '')}` : '';
+}
+
+/** 優先送 Flex 卡片（好讀、賽事連結可點）；T 表送圖片；LINE 拒絕時退回純文字 */
+async function reply(replyToken, content, token, env = {}) {
+  const { text, flex, image, tier } = typeof content === 'string' ? { text: content } : content;
   const plain = [{ type: 'text', text: text.slice(0, 4900) }];
+  if (image === 'tier') {
+    const url = tierImageUrl(env, tier);
+    if (url) {
+      const caption = `📊 戰鬥陀螺 T 表（${(tier && tier.experts) || '?'} 位高手評級・${(tier && tier.updated) || ''}）
+資料：beybladehub.app（社群整理，非官方）`;
+      const ok = await pushReply(replyToken, [{ type: 'image', originalContentUrl: url, previewImageUrl: url }, { type: 'text', text: caption }], token);
+      if (ok) return;
+      console.error('[reply] 圖片失敗，改送文字版 T 表');
+    }
+    return pushReply(replyToken, plain, token);
+  }
   if (flex) {
     const altText = text.replace(/[━─]/g, '').replace(/\s+/g, ' ').trim().slice(0, 380) || '查詢結果';
     const ok = await pushReply(replyToken, [{ type: 'flex', altText, contents: flex }], token);
@@ -58,7 +76,7 @@ async function handleEvent(ev, env) {
   if (!q.triggered) return; // 群組沒有 @ / 前綴 → 保持安靜
   const [data, events] = await Promise.all([getCombos(env), getEvents(env)]);
   const out = q.text ? handleRich(q.text, data, { windowDays: Number(env.WINDOW_DAYS) || 180, events }) : { text: HELP };
-  return reply(ev.replyToken, out, token);
+  return reply(ev.replyToken, out, token, env);
 }
 
 async function handler(req, res) {

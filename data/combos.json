@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-16T16:35:36Z",
- "count": 35,
+ "updated_at": "2026-11-16T17:21:27Z",
+ "count": 108,
  "combos": [
   {
    "blade": "wizard_rod",
@@ -147,6 +147,34 @@
    "url": "https://beybladehub.app/taiwan-gp"
   },
   {
+   "blade": null,
+   "ratchet": "9-60",
+   "bit": "H",
+   "combo": "戰神爆擊輔助 W 9-60H",
+   "rank": 3,
+   "division": "成人組",
+   "event": "2026 極限盃 G1 全國大賽（高雄夢時代）",
+   "date": "2026-07-25",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026",
+   "cx_label": "戰神爆擊輔助 W",
+   "level": "G1"
+  },
+  {
+   "blade": null,
+   "ratchet": "9-60",
+   "bit": "H",
+   "combo": "戰神爆擊輔助 W 9-60H",
+   "rank": 3,
+   "division": "通常組",
+   "event": "2026 極限盃 G1 全國大賽（高雄夢時代）",
+   "date": "2026-07-25",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026",
+   "cx_label": "戰神爆擊輔助 W",
+   "level": "G1"
+  },
+  {
    "blade": "wizard_rod",
    "ratchet": "3-60",
    "bit": "FB",
@@ -207,6 +235,19 @@
    "url": "https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026"
   },
   {
+   "blade": "wizard_rod",
+   "ratchet": "1-60",
+   "bit": "FB",
+   "combo": "Wizard Rod 1-60FB",
+   "rank": 4,
+   "division": "成人組",
+   "event": "2026 極限盃 G1 全國大賽（高雄夢時代）",
+   "date": "2026-07-25",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026",
+   "level": "G1"
+  },
+  {
    "blade": "shark_scale",
    "ratchet": "7-60",
    "bit": "R",
@@ -229,6 +270,19 @@
    "date": "2026-07-25",
    "source": "beybladehub.app",
    "url": "https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "3-60",
+   "bit": "Nr",
+   "combo": "Shark Scale 3-60Nr",
+   "rank": 4,
+   "division": "成人組",
+   "event": "2026 極限盃 G1 全國大賽（高雄夢時代）",
+   "date": "2026-07-25",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026",
+   "level": "G1"
   },
   {
    "blade": "shark_scale",
@@ -315,6 +369,19 @@
    "url": "https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026"
   },
   {
+   "blade": "cobalt_dragoon",
+   "ratchet": "9-60",
+   "bit": "E",
+   "combo": "Cobalt Dragoon 9-60E",
+   "rank": 4,
+   "division": "成人組",
+   "event": "2026 極限盃 G1 全國大賽（高雄夢時代）",
+   "date": "2026-07-25",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026",
+   "level": "G1"
+  },
+  {
    "blade": "clock_mirage",
    "ratchet": "4-55",
    "bit": "LO",
@@ -337,6 +404,36 @@
    "date": "2026-07-25",
    "source": "beybladehub.app",
    "url": "https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026"
+  },
+  {
+   "blade": null,
+   "ratchet": "9-70",
+   "bit": "H",
+   "combo": "戰神爆擊輔助 W 9-70H",
+   "rank": 1,
+   "division": "成人組",
+   "event": "2026 極限盃 G1 全國大賽（台中 LaLaport）",
+   "date": "2026-06-27",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/taiwan-gp",
+   "cx_label": "戰神爆擊輔助 W",
+   "player": "曾博恩",
+   "level": "G1"
+  },
+  {
+   "blade": null,
+   "ratchet": "9-60",
+   "bit": "H",
+   "combo": "巨鯨鞭打超越 F輔助 H 9-60H",
+   "rank": 2,
+   "division": "成人組",
+   "event": "2026 極限盃 G1 全國大賽（台中 LaLaport）",
+   "date": "2026-06-27",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/taiwan-gp",
+   "cx_label": "巨鯨鞭打超越 F輔助 H",
+   "player": "黃永成",
+   "level": "G1"
   },
   {
    "blade": "wizard_rod",
@@ -387,6 +484,549 @@
    "url": "https://beybladehub.app/taiwan-gp"
   },
   {
+   "blade": "wizard_rod",
+   "ratchet": "1-60",
+   "bit": "H",
+   "combo": "Wizard Rod 1-60H",
+   "rank": 1,
+   "division": null,
+   "event": "月半公仔舖・NOVA平日杯",
+   "date": "2026-06-10",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "level": "G3",
+   "n": 4
+  },
+  {
+   "blade": "wizard_rod",
+   "ratchet": "1-60",
+   "bit": "FB",
+   "combo": "Wizard Rod 1-60FB",
+   "rank": 1,
+   "division": null,
+   "event": "月半公仔舖・NOVA平日杯",
+   "date": "2026-06-10",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "level": "G3",
+   "n": 4
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "9-60",
+   "bit": "LO",
+   "combo": "Shark Scale 9-60LO",
+   "rank": 1,
+   "division": null,
+   "event": "月半公仔舖・NOVA平日杯",
+   "date": "2026-06-10",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "墨鏡男"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "1-70",
+   "bit": "FB",
+   "combo": "Shark Scale 1-70FB",
+   "rank": 2,
+   "division": null,
+   "event": "月半公仔舖・NOVA平日杯",
+   "date": "2026-06-10",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "Angela"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "1-60",
+   "bit": "K",
+   "combo": "Shark Scale 1-60K",
+   "rank": 3,
+   "division": null,
+   "event": "月半公仔舖・NOVA平日杯",
+   "date": "2026-06-10",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "Kobe"
+  },
+  {
+   "blade": "phoenix_wing",
+   "ratchet": "7-60",
+   "bit": "R",
+   "combo": "Phoenix Wing 7-60R",
+   "rank": 1,
+   "division": null,
+   "event": "月半公仔舖・NOVA平日杯",
+   "date": "2026-06-10",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "n": 3
+  },
+  {
+   "blade": "dran_strike",
+   "ratchet": "3-70",
+   "bit": "J",
+   "combo": "Dran Strike 3-70J",
+   "rank": 3,
+   "division": null,
+   "event": "月半公仔舖・NOVA平日杯",
+   "date": "2026-06-10",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "Kobe"
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "1-70",
+   "bit": "H",
+   "combo": "Aero Pegasus 1-70H",
+   "rank": 1,
+   "division": null,
+   "event": "月半公仔舖・NOVA平日杯",
+   "date": "2026-06-10",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "墨鏡男"
+  },
+  {
+   "blade": null,
+   "ratchet": "1-50",
+   "bit": "J",
+   "combo": "龍王閃擊 1-50J",
+   "rank": 3,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "cx": "cx_13",
+   "cx_label": "龍王閃擊超越 F輔助 H",
+   "player": "青辰"
+  },
+  {
+   "blade": "wizard_rod",
+   "ratchet": "9-60",
+   "bit": "R",
+   "combo": "Wizard Rod 9-60R",
+   "rank": 2,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "郁夫"
+  },
+  {
+   "blade": "wizard_rod",
+   "ratchet": "1-70",
+   "bit": "J",
+   "combo": "Wizard Rod 1-70J",
+   "rank": 4,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "阿克"
+  },
+  {
+   "blade": "wizard_rod",
+   "ratchet": "1-60",
+   "bit": "L",
+   "combo": "Wizard Rod 1-60L",
+   "rank": 1,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "家維"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "4-50",
+   "bit": "LR",
+   "combo": "Shark Scale 4-50LR",
+   "rank": 4,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "阿克"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "1-60",
+   "bit": "LR",
+   "combo": "Shark Scale 1-60LR",
+   "rank": 2,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "n": 2
+  },
+  {
+   "blade": "phoenix_wing",
+   "ratchet": "1-50",
+   "bit": "R",
+   "combo": "Phoenix Wing 1-50R",
+   "rank": 4,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "阿克"
+  },
+  {
+   "blade": "meteor_dragoon",
+   "ratchet": "7-70",
+   "bit": "L",
+   "combo": "Meteor Dragoon 7-70L",
+   "rank": 1,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "level": "G3",
+   "n": 4
+  },
+  {
+   "blade": "meteor_dragoon",
+   "ratchet": "7-60",
+   "bit": "LF",
+   "combo": "Meteor Dragoon 7-60LF",
+   "rank": 3,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "青辰"
+  },
+  {
+   "blade": "hells_hammer",
+   "ratchet": "M-85",
+   "bit": "I",
+   "combo": "Hells Hammer M-85I",
+   "rank": 3,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "青辰"
+  },
+  {
+   "blade": "dran_strike",
+   "ratchet": "3-70",
+   "bit": "LR",
+   "combo": "Dran Strike 3-70LR",
+   "rank": 1,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "家維"
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "9-60",
+   "bit": "J",
+   "combo": "Aero Pegasus 9-60J",
+   "rank": 1,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・攻擊軸心限定賽",
+   "date": "2026-06-01",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "家維"
+  },
+  {
+   "blade": "wizard_rod",
+   "ratchet": "9-60",
+   "bit": "H",
+   "combo": "Wizard Rod 9-60H",
+   "rank": 1,
+   "division": null,
+   "event": "無限魂",
+   "date": "2026-05-31",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "國展"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "3-60",
+   "bit": "LO",
+   "combo": "Shark Scale 3-60LO",
+   "rank": 1,
+   "division": null,
+   "event": "無限魂",
+   "date": "2026-05-31",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "國展"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "1-70",
+   "bit": "LR",
+   "combo": "Shark Scale 1-70LR",
+   "rank": 1,
+   "division": null,
+   "event": "無限魂",
+   "date": "2026-05-31",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "n": 2
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "7-60",
+   "bit": "R",
+   "combo": "Aero Pegasus 7-60R",
+   "rank": 1,
+   "division": null,
+   "event": "無限魂",
+   "date": "2026-05-31",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "國展"
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "1-50",
+   "bit": "R",
+   "combo": "Aero Pegasus 1-50R",
+   "rank": 2,
+   "division": null,
+   "event": "無限魂",
+   "date": "2026-05-31",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "優奈"
+  },
+  {
+   "blade": "wizard_rod",
+   "ratchet": "9-60",
+   "bit": "FB",
+   "combo": "Wizard Rod 9-60FB",
+   "rank": 1,
+   "division": null,
+   "event": "木蘭盃（新北泰山區）",
+   "date": "2026-05-30",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "level": "G3",
+   "n": 2
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "9-60",
+   "bit": "FB",
+   "combo": "Shark Scale 9-60FB",
+   "rank": 1,
+   "division": null,
+   "event": "木蘭盃（新北泰山區）",
+   "date": "2026-05-30",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "糖糖J"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "1-70",
+   "bit": "LO",
+   "combo": "Shark Scale 1-70LO",
+   "rank": 2,
+   "division": null,
+   "event": "木蘭盃（新北泰山區）",
+   "date": "2026-05-30",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "天行者"
+  },
+  {
+   "blade": "phoenix_wing",
+   "ratchet": "7-60",
+   "bit": "R",
+   "combo": "Phoenix Wing 7-60R",
+   "rank": 3,
+   "division": null,
+   "event": "木蘭盃（新北泰山區）",
+   "date": "2026-05-30",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "花果山水濂洞有夠濕美猴王"
+  },
+  {
+   "blade": "phoenix_wing",
+   "ratchet": "6-60",
+   "bit": "LR",
+   "combo": "Phoenix Wing 6-60LR",
+   "rank": 4,
+   "division": null,
+   "event": "木蘭盃（新北泰山區）",
+   "date": "2026-05-30",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "巴巴"
+  },
+  {
+   "blade": "meteor_dragoon",
+   "ratchet": "9-60",
+   "bit": "L",
+   "combo": "Meteor Dragoon 9-60L",
+   "rank": 3,
+   "division": null,
+   "event": "木蘭盃（新北泰山區）",
+   "date": "2026-05-30",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "花果山水濂洞有夠濕美猴王"
+  },
+  {
+   "blade": "dran_strike",
+   "ratchet": "3-70",
+   "bit": "LF",
+   "combo": "Dran Strike 3-70LF",
+   "rank": 4,
+   "division": null,
+   "event": "木蘭盃（新北泰山區）",
+   "date": "2026-05-30",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "巴巴"
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "9-60",
+   "bit": "T",
+   "combo": "Aero Pegasus 9-60T",
+   "rank": 4,
+   "division": null,
+   "event": "木蘭盃（新北泰山區）",
+   "date": "2026-05-30",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "巴巴"
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "1-50",
+   "bit": "R",
+   "combo": "Aero Pegasus 1-50R",
+   "rank": 2,
+   "division": null,
+   "event": "木蘭盃（新北泰山區）",
+   "date": "2026-05-30",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "天行者"
+  },
+  {
+   "blade": null,
+   "ratchet": "1-50",
+   "bit": "H",
+   "combo": "龍王閃擊 1-50H",
+   "rank": 3,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "cx": "cx_13",
+   "cx_label": "龍王閃擊超越 F輔助 E",
+   "player": "黑老大"
+  },
+  {
+   "blade": null,
+   "ratchet": "1-60",
+   "bit": "F",
+   "combo": "騎士爆擊輔助 K 1-60F",
+   "rank": 3,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "cx_label": "騎士爆擊輔助 K",
+   "player": "黑老大"
+  },
+  {
+   "blade": null,
+   "ratchet": "7-60",
+   "bit": "H",
+   "combo": "帝王極變超越 P輔助 H 7-60H",
+   "rank": 1,
+   "division": null,
+   "event": "無限魂 0529 戰鬥陀螺賽事（禁鮫鯊狂鱗・魔導神杖，強制一顆 CX）",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/blog/infinity-soul-cup-2026-0529",
+   "cx_label": "帝王極變超越 P輔助 H",
+   "player": "雪兔"
+  },
+  {
+   "blade": "silver_wolf",
+   "ratchet": "9-80",
+   "bit": "FB",
+   "combo": "Silver Wolf 9-80FB",
+   "rank": 2,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "我很餓"
+  },
+  {
+   "blade": "scorpio_spear",
+   "ratchet": "9-60",
+   "bit": "LO",
+   "combo": "Scorpio Spear 9-60LO",
+   "rank": 4,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "林園瘋狗 小Q"
+  },
+  {
+   "blade": "phoenix_wing",
+   "ratchet": "3-70",
+   "bit": "J",
+   "combo": "Phoenix Wing 3-70J",
+   "rank": 2,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "我很餓"
+  },
+  {
+   "blade": "meteor_dragoon",
+   "ratchet": "1-60",
+   "bit": "L",
+   "combo": "Meteor Dragoon 1-60L",
+   "rank": 2,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "我很餓"
+  },
+  {
    "blade": "golem_rock",
    "ratchet": "9-60",
    "bit": "K",
@@ -411,6 +1051,265 @@
    "url": "https://beybladehub.app/blog/infinity-soul-cup-2026-0529"
   },
   {
+   "blade": "dran_strike",
+   "ratchet": "3-60",
+   "bit": "FF",
+   "combo": "Dran Strike 3-60FF",
+   "rank": 4,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "林園瘋狗 小Q"
+  },
+  {
+   "blade": "cobalt_dragoon",
+   "ratchet": "9-60",
+   "bit": "E",
+   "combo": "Cobalt Dragoon 9-60E",
+   "rank": 1,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "阿天"
+  },
+  {
+   "blade": "bullet_griffon",
+   "ratchet": "",
+   "bit": "M",
+   "combo": "Bullet Griffon M",
+   "rank": 3,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "黑老大"
+  },
+  {
+   "blade": "bullet_griffon",
+   "ratchet": "",
+   "bit": "H",
+   "combo": "Bullet Griffon H",
+   "rank": 1,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "n": 3
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "7-60",
+   "bit": "R",
+   "combo": "Aero Pegasus 7-60R",
+   "rank": 1,
+   "division": null,
+   "event": "漢謚玩具社（高雄苓雅）・交流賽",
+   "date": "2026-05-29",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "阿天"
+  },
+  {
+   "blade": null,
+   "ratchet": "9-60",
+   "bit": "LR",
+   "combo": "龍王閃擊 9-60LR",
+   "rank": 2,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "cx": "cx_13",
+   "cx_label": "龍王閃擊超越 B輔助 K",
+   "player": "阿華"
+  },
+  {
+   "blade": null,
+   "ratchet": "5-70",
+   "bit": "TK",
+   "combo": "焰神滅世 5-70TK",
+   "rank": 1,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "cx": "cx_09",
+   "cx_label": "焰神滅世",
+   "player": "HKY"
+  },
+  {
+   "blade": "tyranno_beat",
+   "ratchet": "1-70",
+   "bit": "L",
+   "combo": "Tyranno Beat 1-70L",
+   "rank": 1,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "HKY"
+  },
+  {
+   "blade": "silver_wolf",
+   "ratchet": "4-55",
+   "bit": "FB",
+   "combo": "Silver Wolf 4-55FB",
+   "rank": 2,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "阿華"
+  },
+  {
+   "blade": "scorpio_spear",
+   "ratchet": "5-60",
+   "bit": "H",
+   "combo": "Scorpio Spear 5-60H",
+   "rank": 3,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "大亨堡"
+  },
+  {
+   "blade": "mummy_curse",
+   "ratchet": "4-50",
+   "bit": "W",
+   "combo": "Mummy Curse 4-50W",
+   "rank": 3,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "大亨堡"
+  },
+  {
+   "blade": "knight_mail",
+   "ratchet": "3-60",
+   "bit": "LR",
+   "combo": "Knight Mail 3-60LR",
+   "rank": 3,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "大亨堡"
+  },
+  {
+   "blade": "golem_rock",
+   "ratchet": "",
+   "bit": "OP",
+   "combo": "Golem Rock OP",
+   "rank": 4,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "Leon"
+  },
+  {
+   "blade": "dran_strike",
+   "ratchet": "4-50",
+   "bit": "FF",
+   "combo": "Dran Strike 4-50FF",
+   "rank": 4,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "Leon"
+  },
+  {
+   "blade": "dran_buster",
+   "ratchet": "1-60",
+   "bit": "LR",
+   "combo": "Dran Buster 1-60LR",
+   "rank": 4,
+   "division": null,
+   "event": "羽智波 T2盃 戰鬥陀螺交流賽（UCHIHASPORTS）",
+   "date": "2026-05-24",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "player": "Leon"
+  },
+  {
+   "blade": "wizard_rod",
+   "ratchet": "1-60",
+   "bit": "J",
+   "combo": "Wizard Rod 1-60J",
+   "rank": 1,
+   "division": null,
+   "event": "RiRiCO（台中北屯）・全攻擊軸心限定賽",
+   "date": "2026-05-09",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "9-60",
+   "bit": "O",
+   "combo": "Shark Scale 9-60O",
+   "rank": 1,
+   "division": null,
+   "event": "第三屆麥萌盃（MYMENGTOYS）",
+   "date": "2026-05-09",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos"
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "1-70",
+   "bit": "R",
+   "combo": "Aero Pegasus 1-70R",
+   "rank": 1,
+   "division": null,
+   "event": "第三屆麥萌盃（MYMENGTOYS）",
+   "date": "2026-05-09",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos"
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "1-60",
+   "bit": "R",
+   "combo": "Aero Pegasus 1-60R",
+   "rank": 3,
+   "division": null,
+   "event": "第三屆麥萌盃（MYMENGTOYS）",
+   "date": "2026-05-09",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos"
+  },
+  {
+   "blade": "aero_pegasus",
+   "ratchet": "1-50",
+   "bit": "R",
+   "combo": "Aero Pegasus 1-50R",
+   "rank": 1,
+   "division": null,
+   "event": "RiRiCO（台中北屯）・全攻擊軸心限定賽",
+   "date": "2026-05-09",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos"
+  },
+  {
    "blade": "samurai_saber",
    "ratchet": "1-60",
    "bit": "J",
@@ -421,6 +1320,809 @@
    "date": "2026-05-06",
    "source": "beybladehub.app",
    "url": "https://beybladehub.app/blog/tokyo-g1-2026-0506"
+  },
+  {
+   "blade": null,
+   "ratchet": "1-50",
+   "bit": "F",
+   "combo": "帝王閃擊超越 B輔助 H 1-50F",
+   "rank": 2,
+   "division": "通常組",
+   "event": "台南新天地（台南中西區）",
+   "date": "2026-05-03",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "cx_label": "帝王閃擊超越 B輔助 H",
+   "level": "G3"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "1-70",
+   "bit": "K",
+   "combo": "Shark Scale 1-70K",
+   "rank": 2,
+   "division": "通常組",
+   "event": "台南新天地（台南中西區）",
+   "date": "2026-05-03",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "level": "G3"
+  },
+  {
+   "blade": "shark_scale",
+   "ratchet": "1-50",
+   "bit": "R",
+   "combo": "Shark Scale 1-50R",
+   "rank": 3,
+   "division": "通常組",
+   "event": "台南新天地（台南中西區）",
+   "date": "2026-05-03",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "level": "G3"
+  },
+  {
+   "blade": "cobalt_dragoon",
+   "ratchet": "6-60",
+   "bit": "E",
+   "combo": "Cobalt Dragoon 6-60E",
+   "rank": 1,
+   "division": "通常組",
+   "event": "台南新天地（台南中西區）",
+   "date": "2026-05-03",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "level": "G3"
+  },
+  {
+   "blade": "bullet_griffon",
+   "ratchet": "",
+   "bit": "K",
+   "combo": "Bullet Griffon K",
+   "rank": 3,
+   "division": "通常組",
+   "event": "台南新天地（台南中西區）",
+   "date": "2026-05-03",
+   "source": "beybladehub.app/combos",
+   "url": "https://beybladehub.app/combos",
+   "level": "G3"
   }
- ]
+ ],
+ "recommended": {
+  "cobalt_dragoon": {
+   "zh": "蒼穹龍騎士",
+   "series": "BX",
+   "tips": [
+    {
+     "ratchet": "5-60",
+     "bit": "E",
+     "style": "均衡型",
+     "desc": "均衡型打法，5 凸固鎖搭配 E 揚升軸讓旋轉穩定維持。不求一擊決勝，靠持久力等待對手失誤。適合節奏穩健、喜歡攻守均衡的玩家"
+    }
+   ],
+   "common_ratchets": [
+    "5-60",
+    "7-60",
+    "9-60",
+    "6-60"
+   ],
+   "common_bits": [
+    "E",
+    "L"
+   ]
+  },
+  "phoenix_wing": {
+   "zh": "鳳凰飛翼",
+   "series": "BX",
+   "tips": [
+    {
+     "ratchet": "9-60",
+     "bit": "R",
+     "style": "攻擊型",
+     "desc": "新手御三家 BX-23，38.5g 高重量加上 9 凸固鎖爆裂耐受性強，自己不容易被打爆。R 軸主動移動頻繁觸發，適合喜歡積極進攻的玩家，但發射力道要跟上才能維持轉速"
+    }
+   ],
+   "common_ratchets": [
+    "3-60",
+    "7-60",
+    "9-60",
+    "3-70",
+    "1-50",
+    "6-60"
+   ],
+   "common_bits": [
+    "R",
+    "LR",
+    "J"
+   ]
+  },
+  "tyranno_beat": {
+   "zh": "暴龍霸擊",
+   "series": "BX",
+   "tips": [
+    {
+     "ratchet": "1-60",
+     "bit": "LR",
+     "style": "攻擊型",
+     "desc": "1 凸固鎖讓每次衝撞集中爆發，LR 軸加速起步，適合全場奔衝打法。對發射力有一定要求，不然容易在衝撞中提前失速"
+    }
+   ],
+   "common_ratchets": [
+    "1-60",
+    "5-60"
+   ],
+   "common_bits": [
+    "R",
+    "LR",
+    "T",
+    "HT"
+   ]
+  },
+  "shark_edge": {
+   "zh": "鮫鯊鋒鰭",
+   "series": "BX",
+   "tips": [
+    {
+     "ratchet": "9-60",
+     "bit": "LF",
+     "style": "耐久型",
+     "desc": "鮫鯊鋒鰭磨損後仍能維持穩定是其最大優點，9 凸固鎖配 LF 軸讓陀螺主動移動，形成特殊的耐久攻擊混合打法"
+    }
+   ],
+   "common_ratchets": [
+    "9-60",
+    "4-55",
+    "1-60"
+   ],
+   "common_bits": [
+    "LF",
+    "UF",
+    "W",
+    "UN"
+   ]
+  },
+  "whale_wave": {
+   "zh": "巨鯨怒濤",
+   "series": "BX",
+   "tips": [
+    {
+     "ratchet": "5-60",
+     "bit": "F",
+     "style": "均衡型",
+     "desc": "不靠高速衝撞，靠重量與位置壓縮對手旋轉空間。5 凸固鎖增加穩定性，F 平底軸緩慢移動形成封鎖。適合節奏穩定、不急著決勝的打法"
+    }
+   ],
+   "common_ratchets": [
+    "5-60",
+    "1-60"
+   ],
+   "common_bits": [
+    "F",
+    "L"
+   ]
+  },
+  "samurai_calibur": {
+   "zh": "武士魂斬",
+   "series": "BX",
+   "tips": [
+    {
+     "ratchet": "7-70",
+     "bit": "T",
+     "style": "均衡型",
+     "desc": "7 凸固鎖讓武士魂斬的重量最大化，T 耐久軸維持旋轉。是偏穩健的均衡打法，重量感明顯但不失靈活"
+    }
+   ],
+   "common_ratchets": [
+    "7-70"
+   ],
+   "common_bits": [
+    "T"
+   ]
+  },
+  "glory_valkyrie": {
+   "zh": "榮耀武神",
+   "series": "UX",
+   "tips": [],
+   "common_ratchets": [],
+   "common_bits": [
+    "LR",
+    "UF",
+    "K",
+    "UN",
+    "WW",
+    "WB",
+    "B",
+    "R"
+   ]
+  },
+  "shark_scale": {
+   "zh": "鮫鯊狂鱗",
+   "series": "UX",
+   "tips": [
+    {
+     "ratchet": "4-50",
+     "bit": "K",
+     "style": "攻擊型",
+     "desc": "新手御三家 UX-15，也是很多玩家第一個試的配置。4-50 低固鎖讓重心壓低穩定，K 踢擊軸提供獨特攻擊節奏，攻擊效率在 UX 中數一數二"
+    }
+   ],
+   "common_ratchets": [
+    "4-50",
+    "1-60",
+    "1-70",
+    "7-60",
+    "6-60",
+    "3-60",
+    "1-50",
+    "9-60"
+   ],
+   "common_bits": [
+    "UF",
+    "K",
+    "L",
+    "R",
+    "LO",
+    "W",
+    "D",
+    "Nr",
+    "J",
+    "LR",
+    "FB",
+    "O"
+   ]
+  },
+  "dran_buster": {
+   "zh": "蒼龍爆刃",
+   "series": "UX",
+   "tips": [],
+   "common_ratchets": [
+    "1-60",
+    "3-60",
+    "9-60"
+   ],
+   "common_bits": [
+    "R",
+    "LR",
+    "K",
+    "T"
+   ]
+  },
+  "silver_wolf": {
+   "zh": "霜輝銀狼",
+   "series": "UX",
+   "tips": [
+    {
+     "ratchet": "5-60",
+     "bit": "FB",
+     "style": "攻擊型",
+     "desc": "5 凸固鎖穩定重量，FB 自由球型軸讓移動路徑更自由奔放。一旦抓住攻擊角度打擊力相當強，但進攻時機需要一定判斷力"
+    }
+   ],
+   "common_ratchets": [
+    "3-60",
+    "5-60",
+    "7-70",
+    "9-60",
+    "9-80",
+    "4-55"
+   ],
+   "common_bits": [
+    "B",
+    "FB",
+    "H"
+   ]
+  },
+  "wizard_rod": {
+   "zh": "魔導神杖",
+   "series": "UX",
+   "tips": [
+    {
+     "ratchet": "3-60",
+     "bit": "H",
+     "style": "均衡型",
+     "desc": "新手御三家 UX-03。3 凸固鎖配 H 六角軸讓旋轉穩定，兼顧耐久與攻防，容易上手。賽場上穩定度高，通常能穩拿至少一分，是進入 UX 的好起點"
+    }
+   ],
+   "common_ratchets": [
+    "1-60",
+    "3-60",
+    "9-60",
+    "6-60",
+    "1-70"
+   ],
+   "common_bits": [
+    "B",
+    "O",
+    "H",
+    "FB",
+    "UN",
+    "L",
+    "J",
+    "R"
+   ]
+  },
+  "knight_mail": {
+   "zh": "騎士圓甲",
+   "series": "UX",
+   "tips": [
+    {
+     "ratchet": "9-60",
+     "bit": "R",
+     "style": "攻擊型",
+     "desc": "騎士圓甲刃型搭配 R 軸積極移動，速攻節奏快。9 凸固鎖提供良好爆裂耐受性，進攻時不容易被對手切開反擊。發射到轉速高峰後立即進攻才能發揮最大效果"
+    }
+   ],
+   "common_ratchets": [
+    "3-60",
+    "7-70",
+    "9-60"
+   ],
+   "common_bits": [
+    "R",
+    "GB",
+    "W",
+    "LR"
+   ]
+  },
+  "scorpio_spear": {
+   "zh": "天蠍長矛",
+   "series": "UX",
+   "tips": [
+    {
+     "ratchet": "7-60",
+     "bit": "T",
+     "style": "均衡型",
+     "desc": "UX 最重刃之一，39.6g 配 7 凸固鎖構成重量最大化的重戰車。T 耐久軸讓陀螺穩定旋轉壓制對手。⚠ 和帝王威能一樣，轉速要夠高才能發揮，不然重量反成負擔"
+    }
+   ],
+   "common_ratchets": [
+    "7-60",
+    "3-60",
+    "5-60",
+    "9-60"
+   ],
+   "common_bits": [
+    "T",
+    "U",
+    "LR",
+    "H",
+    "LO"
+   ]
+  },
+  "golem_rock": {
+   "zh": "魔像奇岩",
+   "series": "UX",
+   "tips": [
+    {
+     "ratchet": "9-60",
+     "bit": "LR",
+     "style": "防守型",
+     "desc": "防守型刃搭配 9 凸速攻固鎖，是「防守反擊」打法。受撞後靠穩定性維持旋轉，LR 軸讓陀螺主動找反擊機會，適合喜歡看準時機再出手的玩家"
+    }
+   ],
+   "common_ratchets": [
+    "1-60",
+    "6-60",
+    "9-60"
+   ],
+   "common_bits": [
+    "Q",
+    "LR",
+    "LO",
+    "K",
+    "OP"
+   ]
+  },
+  "meteor_dragoon": {
+   "zh": "隕星龍騎士",
+   "series": "UX",
+   "tips": [
+    {
+     "ratchet": "5-70",
+     "bit": "L",
+     "style": "均衡型",
+     "desc": "UX 均衡旗艦，5-70 固鎖維持穩定重心，L 水平軸讓旋轉耐久拉長。面對攻擊型以穩定換取對手錯失時機，有一定反擊能力，打法偏穩"
+    }
+   ],
+   "common_ratchets": [
+    "5-70",
+    "9-60",
+    "7-70",
+    "1-60",
+    "7-60"
+   ],
+   "common_bits": [
+    "L",
+    "E",
+    "LF"
+   ]
+  },
+  "impact_drake": {
+   "zh": "衝擊龍神",
+   "series": "UX",
+   "tips": [
+    {
+     "ratchet": "1-60",
+     "bit": "T",
+     "style": "攻擊型",
+     "desc": "38.8g 重量配 1 凸固鎖，典型的重量型單次衝撞配置。T 錐底軸讓陀螺穩定旋轉等一擊，Over Finish 能力很強。不靠頻率，靠一次命中的破壞力"
+    }
+   ],
+   "common_ratchets": [
+    "1-60",
+    "5-60",
+    "7-80"
+   ],
+   "common_bits": [
+    "T",
+    "U",
+    "Z"
+   ]
+  },
+  "samurai_saber": {
+   "zh": "武士星劍",
+   "series": "UX",
+   "tips": [
+    {
+     "ratchet": "9-60",
+     "bit": "LR",
+     "style": "攻擊型",
+     "desc": "9 凸連打配 LR 速攻軸，武士星劍的刃型讓連打動作更精確。賽場上常見的速攻節奏配置"
+    }
+   ],
+   "common_ratchets": [
+    "1-60",
+    "3-60",
+    "9-60"
+   ],
+   "common_bits": [
+    "E",
+    "P",
+    "LR"
+   ]
+  },
+  "cx:爆擊": {
+   "zh": "爆擊",
+   "series": "CX",
+   "tips": [],
+   "common_ratchets": [
+    "4-50",
+    "9-70",
+    "9-60",
+    "1-60"
+   ],
+   "common_bits": [
+    "LR",
+    "H",
+    "F"
+   ]
+  },
+  "cx:威能": {
+   "zh": "威能",
+   "series": "CX",
+   "tips": [],
+   "common_ratchets": [
+    "7-60"
+   ],
+   "common_bits": [
+    "LR"
+   ]
+  },
+  "cx:九尾": {
+   "zh": "九尾",
+   "series": "CX",
+   "tips": [],
+   "common_ratchets": [
+    "1-60",
+    "6-60"
+   ],
+   "common_bits": [
+    "LR",
+    "H"
+   ]
+  },
+  "cx:獵魂": {
+   "zh": "獵魂",
+   "series": "CX",
+   "tips": [],
+   "common_ratchets": [
+    "9-60"
+   ],
+   "common_bits": [
+    "E"
+   ]
+  },
+  "cx:勇氣": {
+   "zh": "勇氣",
+   "series": "CX",
+   "tips": [],
+   "common_ratchets": [
+    "1-60",
+    "7-60",
+    "3-60"
+   ],
+   "common_bits": [
+    "R",
+    "LR",
+    "K",
+    "A"
+   ]
+  },
+  "cx:幽冥": {
+   "zh": "幽冥",
+   "series": "CX",
+   "tips": [],
+   "common_ratchets": [
+    "7-60",
+    "9-60"
+   ],
+   "common_bits": [
+    "T",
+    "H",
+    "L"
+   ]
+  }
+ },
+ "tier": {
+  "experts": 7,
+  "blades": [
+   {
+    "name": "鮫鯊狂鱗",
+    "tier": "X",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/UX-15"
+   },
+   {
+    "name": "魔導神杖",
+    "tier": "X",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/UX-03"
+   },
+   {
+    "name": "隕星龍騎士",
+    "tier": "X",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/UX-17"
+   },
+   {
+    "name": "子彈獅鷲",
+    "tier": "X",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/UX-19"
+   },
+   {
+    "name": "天馬爆擊",
+    "tier": "X",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/CX-07"
+   },
+   {
+    "name": "空力天馬",
+    "tier": "X",
+    "votes": 1,
+    "of": 7,
+    "href": "/parts/combos/UX-00-bxh10"
+   },
+   {
+    "name": "空力天馬",
+    "tier": "X",
+    "votes": 1,
+    "of": 7,
+    "href": "/parts/combos/UX-00-bxg24"
+   },
+   {
+    "name": "蒼穹龍騎士",
+    "tier": "SS",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/BX-34"
+   },
+   {
+    "name": "時鐘幻象",
+    "tier": "SS",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/UX-16"
+   },
+   {
+    "name": "鳳凰飛翼",
+    "tier": "SS",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/BX-23"
+   },
+   {
+    "name": "蒼龍突擊",
+    "tier": "SS",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/BX-49"
+   },
+   {
+    "name": "古屍詛咒",
+    "tier": "SS",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/combos/UX-18"
+   }
+  ],
+  "ratchets": [
+   {
+    "name": "9-60",
+    "tier": "X",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-9-60"
+   },
+   {
+    "name": "7-60",
+    "tier": "X",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-7-60"
+   },
+   {
+    "name": "1-60",
+    "tier": "X",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-1-60"
+   },
+   {
+    "name": "1-50",
+    "tier": "X",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-1-50"
+   },
+   {
+    "name": "1-70",
+    "tier": "X",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-1-70"
+   },
+   {
+    "name": "3-60",
+    "tier": "S",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-3-60"
+   },
+   {
+    "name": "9-70",
+    "tier": "S",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-9-70"
+   },
+   {
+    "name": "5-60",
+    "tier": "S",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-5-60"
+   },
+   {
+    "name": "6-60",
+    "tier": "S",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-6-60"
+   },
+   {
+    "name": "4-50",
+    "tier": "S",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-4-50"
+   },
+   {
+    "name": "7-70",
+    "tier": "T1",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-7-70"
+   },
+   {
+    "name": "0-60",
+    "tier": "S",
+    "votes": 2,
+    "of": 7,
+    "href": "/parts/ratchets#ratchet-0-60"
+   }
+  ],
+  "bits": [
+   {
+    "name": "E",
+    "tier": "T1",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-E"
+   },
+   {
+    "name": "FB",
+    "tier": "T1",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-FB"
+   },
+   {
+    "name": "H",
+    "tier": "T1",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-H"
+   },
+   {
+    "name": "K",
+    "tier": "T1",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-K"
+   },
+   {
+    "name": "J",
+    "tier": "T1",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-J"
+   },
+   {
+    "name": "LO",
+    "tier": "T1",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-LO"
+   },
+   {
+    "name": "LR",
+    "tier": "T1",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-LR"
+   },
+   {
+    "name": "R",
+    "tier": "T1",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-R"
+   },
+   {
+    "name": "L",
+    "tier": "T1",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-L"
+   },
+   {
+    "name": "B",
+    "tier": "X",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-B"
+   },
+   {
+    "name": "Nr",
+    "tier": "T1",
+    "votes": 3,
+    "of": 7,
+    "href": "/parts/bits#bit-Nr"
+   },
+   {
+    "name": "O",
+    "tier": "T2",
+    "votes": 5,
+    "of": 7,
+    "href": "/parts/bits#bit-O"
+   }
+  ],
+  "updated": "2026/10"
+ }
 }
