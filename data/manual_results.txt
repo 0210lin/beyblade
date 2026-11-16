@@ -1,12 +1,46 @@
-# 手動貼賽果（爬蟲每次執行都會一併讀取）。區塊之間用單獨一行 --- 分隔。
-# 以 # 開頭的行不影響解析（但請把整個範例區塊刪掉或改成真實賽事）。
-#
-# 範例：
-# ---
-# event: 台北盃 #12
-# date: 2026-11-09
-# url: https://example.com/result
-# 1st: Shark Edge 3-60LF
-# 2nd: Wizard Rod 9-60B
-# 3rd: Phoenix Wing 9-60GF
-# ---
+# 賽果資料（爬蟲每次執行都會讀這個檔，轉成 combos.json）。區塊以單獨一行 --- 分隔。
+# 格式：event / date / url / source 四個欄位，下面每行一個名次，同一行多顆配置用 / 分隔：
+#   成人組 冠軍: 鮫鯊狂鱗 3-60 J / 魔導神杖 1-60 H / 榮耀戰神 ＋ K
+# 一體成型戰刃（榮耀武神等）沒有固鎖輪，寫「戰刃 ＋ 軸心」即可。
+# 取自社群站 beybladehub.app 的賽事頁，配置為現場玩家回報整理，非官方資料。
+# CX 組合（如「戰神爆擊＋W輔助戰刃」）目前爬蟲無法解析，已略過。
+---
+event: 2026 極限盃 G1 台灣賽區 第三站（台北）
+date: 2026-09-19
+url: https://beybladehub.app/taiwan-gp
+source: beybladehub.app
+成人組 冠軍: 鮫鯊狂鱗 3-60 J / 紅空力天馬 1-70 LR / 榮耀武神 B
+成人組 亞軍: 鮫鯊狂鱗 3-60 R / 魔導神杖 1-60 H / 榮耀武神 LR
+通常組 冠軍: 鮫鯊狂鱗 6-60 Nr / 魔導神杖 1-60 FB / 蒼穹龍騎士 9-60 E
+通常組 亞軍: 鮫鯊狂鱗 1-60 FB / 蒼穹龍騎士 9-60 E / 魔導神杖 3-60 H
+---
+event: 2026 極限盃 G1 全國大賽（高雄夢時代）
+date: 2026-07-25
+url: https://beybladehub.app/blog/extreme-cup-g1-kaohsiung-2026
+source: beybladehub.app
+成人組 冠軍: 榮耀戰神 ＋ K / 鮫鯊狂鱗 7-60 R / 魔導神杖 1-60 H
+成人組 亞軍: 鮫鯊狂鱗 3-60 J / 榮耀戰神 ＋ R / 魔導神杖 1-60 H
+成人組 季軍: 鮫鯊狂鱗 3-60 J / 紅空力天馬 1-70 LR
+通常組 冠軍: 鮫鯊狂鱗 6-60 Nr / 魔導神杖 1-60 FB / 蒼穹龍騎士 9-60 E
+通常組 亞軍: 魔導神杖 3-60 FB / 鮫鯊狂鱗 1-60 LR / 時鐘幻象 4-55 LO
+通常組 季軍: 鮫鯊狂鱗 1-50 Nr / 魔導神杖 1-60 FB
+---
+event: 2026 極限盃 G1 全國大賽（台中 LaLaport）
+date: 2026-06-27
+url: https://beybladehub.app/taiwan-gp
+source: beybladehub.app
+成人組 冠軍: 鮫鯊狂鱗 7-60 R / 魔導神杖 1-60 FB
+成人組 亞軍: 鳳凰飛翼 7-60 R / 鮫鯊狂鱗 1-60 Nr
+---
+event: 無限魂 0529 戰鬥陀螺賽事（禁鮫鯊狂鱗・魔導神杖，強制一顆 CX）
+date: 2026-05-29
+url: https://beybladehub.app/blog/infinity-soul-cup-2026-0529
+source: beybladehub.app
+冠軍: 魔像奇岩 9-60 K / 蒼龍突擊 9-70 LR
+---
+event: BEYBLADE X G1 2026 東京大會（公開組）
+date: 2026-05-06
+url: https://beybladehub.app/blog/tokyo-g1-2026-0506
+source: beybladehub.app
+公開組 亞軍: 武士星劍 1-60 J
+---

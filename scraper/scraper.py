@@ -32,7 +32,7 @@ COMBOS_PATH = ROOT / "data" / "combos.json"
 MANUAL_PATH = ROOT / "data" / "manual_results.txt"
 SOURCES_PATH = Path(__file__).resolve().parent / "sources.json"
 
-KEEP_DAYS = 120          # 超過這天數的賽事從資料庫淘汰
+KEEP_DAYS = 365          # 超過這天數的賽事從資料庫淘汰
 MAX_COMBOS = 1500        # 資料庫上限
 MIN_REAL_TO_DROP_SEED = 15  # 真實資料累積到這個數量就移除示範資料
 UA = "Mozilla/5.0 (compatible; beyx-combo-scraper/1.0; +https://github.com/)"
@@ -57,18 +57,28 @@ class Matcher:
         self.blades = dictionary["blades"]                       # id -> {zh,en,aliases}
         self.bit_full = {k.lower(): v for k, v in dictionary["bit_full_names"].items()}
         self.bit_abbr = {k.upper(): k for k in dictionary["bits"]}  # NR -> Nr
-        # blade 英文名 → id（空白可有可無；多個同名取第一個）
-        pats = []
+        # blade 名稱（英文、中文、3 字以上別名）→ id；空白可有可無
+        pats, fused_pats = [], []
         self.blade_lookup: dict[str, str] = {}
         for bid, b in self.blades.items():
-            key = re.sub(r"\s+", "", b["en"]).lower()
-            self.blade_lookup[key] = bid
-            pats.append(r"\s*".join(re.escape(w) for w in b["en"].split()))
+            names = [b["en"], b["zh"]] + [a for a in b.get("aliases", []) if len(a) >= 3 and re.search(r"[一-鿿]", a)]
+            for nm in names:
+                key = re.sub(r"\s+", "", nm).lower()
+                self.blade_lookup.setdefault(key, bid)
+                pat = r"\s*".join(re.escape(w) for w in nm.split())
+                pats.append(pat)
+                if b.get("fused"):
+                    fused_pats.append(pat)
         pats.sort(key=len, reverse=True)
+        fused_pats.sort(key=len, reverse=True)
         self.combo_re = re.compile(
-            r"(?P<blade>" + "|".join(pats) + r")[\s:\-]*(?P<ratchet>\d|M)\s*[-–]\s*(?P<h>50|55|60|65|70|80|85)(?!\d)(?P<rest>[^\n]{0,24})",
+            r"(?P<blade>" + "|".join(pats) + r")[\s:\-]*(?P<ratchet>\d|M)\s*[-–]\s*(?P<h>50|55|60|65|70|80|85)(?!\d)(?=(?P<rest>[^\n]{0,24}))",
             re.I,
         )
+        # 戰刃與固鎖輪一體成型的戰刃（UX-19~22 等）：「榮耀武神 B」「榮耀戰神＋K」
+        self.fused_re = re.compile(
+            r"(?P<blade>" + "|".join(fused_pats) + r")\s*[＋+]?\s*(?=(?P<rest>[^\n]{0,24}))", re.I
+        ) if fused_pats else None
         self.full_names_sorted = sorted(self.bit_full, key=len, reverse=True)
 
     def parse_bit(self, rest: str):
@@ -87,26 +97,42 @@ class Matcher:
                 return self.bit_abbr[tok.upper()], sp + len(tok)
         return None
 
+    def _line(self, text, start, end):
+        ls = text.rfind("\n", 0, start) + 1
+        le = text.find("\n", end)
+        return text[ls : le if le != -1 else len(text)]
+
     def find_combos(self, text: str):
         found = []
         for m in self.combo_re.finditer(text):
             r = self.parse_bit(m.group("rest"))
             if not r:
                 continue
-            bit, _ = r
-            blade_key = re.sub(r"\s+", "", m.group("blade")).lower()
-            bid = self.blade_lookup.get(blade_key)
+            bid = self.blade_lookup.get(re.sub(r"\s+", "", m.group("blade")).lower())
             if not bid:
                 continue
             ratchet = f'{m.group("ratchet").upper()}-{m.group("h")}'
-            line_start = text.rfind("\n", 0, m.start()) + 1
-            line_end = text.find("\n", m.end())
-            line = text[line_start : line_end if line_end != -1 else len(text)]
-            found.append((bid, ratchet, bit, line, m.start()))
+            found.append((bid, ratchet, r[0], self._line(text, m.start(), m.end()), m.start()))
+        if self.fused_re:
+            for m in self.fused_re.finditer(text):
+                r = self.parse_bit(m.group("rest"))
+                if not r:
+                    continue
+                bid = self.blade_lookup.get(re.sub(r"\s+", "", m.group("blade")).lower())
+                if bid:
+                    found.append((bid, "", r[0], self._line(text, m.start(), m.end()), m.start()))
         return found
 
     def combo_string(self, bid: str, ratchet: str, bit: str) -> str:
         return f'{self.blades[bid]["en"]} {ratchet}{bit}'
+
+
+DIVISION_RE = re.compile(r"(成人組|通常組|公開組|加開賽|Adult|Normal|Open)", re.I)
+
+
+def detect_division(line: str):
+    m = DIVISION_RE.search(line)
+    return m.group(1) if m else None
 
 
 def detect_rank(line: str):
@@ -138,6 +164,8 @@ def http_get(url: str, **kw):
 
 def parse_date(s: str) -> str:
     s = (s or "").strip()
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", s):
+        return s  # 純日期不做時區轉換
     for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ", "%a, %d %b %Y %H:%M:%S %z", "%Y-%m-%d"):
         try:
             return dt.datetime.strptime(s, fmt).astimezone(dt.timezone.utc).strftime("%Y-%m-%d")
@@ -229,13 +257,13 @@ def load_manual():
         return []
     posts = []
     for block in re.split(r"^\s*---+\s*$", MANUAL_PATH.read_text(encoding="utf-8"), flags=re.M):
-        meta = dict(re.findall(r"^\s*(event|date|url)\s*[:：]\s*(.+?)\s*$", block, flags=re.M | re.I))
+        meta = dict(re.findall(r"^\s*(event|date|url|source)\s*[:：]\s*(.+?)\s*$", block, flags=re.M | re.I))
         meta = {k.lower(): v for k, v in meta.items()}
         if "event" not in meta:
             continue
         posts.append({
             "title": meta["event"], "text": block, "url": meta.get("url", ""),
-            "date": parse_date(meta.get("date", "")), "manual": True,
+            "date": parse_date(meta.get("date", "")), "manual": True, "source": meta.get("source"),
         })
     return posts
 
@@ -250,21 +278,22 @@ def extract(post: dict, matcher: Matcher, source_name: str):
         rank, drop = detect_rank(line)
         if drop:
             continue
-        key = (bid, ratchet, bit, rank)
+        division = detect_division(line)
+        key = (bid, ratchet, bit, rank, division)
         if key in seen:
             continue
         seen.add(key)
         out.append({
             "blade": bid, "ratchet": ratchet, "bit": bit,
             "combo": matcher.combo_string(bid, ratchet, bit),
-            "rank": rank, "event": post["title"][:60] or source_name,
-            "date": post["date"], "source": source_name, "url": post["url"],
+            "rank": rank, "division": division, "event": post["title"][:60] or source_name,
+            "date": post["date"], "source": post.get("source") or source_name, "url": post["url"],
         })
     return out
 
 
 def ident(c: dict):
-    return (c["blade"], c["ratchet"], c["bit"], c.get("rank"), c.get("url") or c.get("event"), c["date"])
+    return (c["blade"], c["ratchet"], c["bit"], c.get("rank"), c.get("division"), c.get("url") or c.get("event"), c["date"])
 
 
 def merge(old: list, new: list, today: dt.date):

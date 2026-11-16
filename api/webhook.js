@@ -4,7 +4,7 @@
  * 無第三方相依 → 冷啟動最快。
  */
 const crypto = require('crypto');
-const { handleQuery, extractQuery, HELP } = require('../lib/engine');
+const { handleRich, extractQuery, HELP } = require('../lib/engine');
 const { getCombos } = require('../lib/data');
 
 function readRaw(req) {
@@ -25,13 +25,27 @@ function validSignature(raw, signature, secret) {
   return given.length === expected.length && crypto.timingSafeEqual(given, expected);
 }
 
-async function reply(replyToken, text, token) {
+async function pushReply(replyToken, messages, token) {
   const res = await fetch('https://api.line.me/v2/bot/message/reply', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-    body: JSON.stringify({ replyToken, messages: [{ type: 'text', text: text.slice(0, 4900) }] }),
+    body: JSON.stringify({ replyToken, messages }),
   });
   if (!res.ok) console.error('[reply] LINE API 錯誤', res.status, await res.text());
+  return res.ok;
+}
+
+/** 優先送 Flex 卡片（好讀、賽事連結可點）；LINE 拒絕時退回純文字 */
+async function reply(replyToken, content, token) {
+  const { text, flex } = typeof content === 'string' ? { text: content } : content;
+  const plain = [{ type: 'text', text: text.slice(0, 4900) }];
+  if (flex) {
+    const altText = text.replace(/[━─]/g, '').replace(/\s+/g, ' ').trim().slice(0, 380) || '查詢結果';
+    const ok = await pushReply(replyToken, [{ type: 'flex', altText, contents: flex }], token);
+    if (ok) return;
+    console.error('[reply] Flex 失敗，改送純文字');
+  }
+  return pushReply(replyToken, plain, token);
 }
 
 async function handleEvent(ev, env) {
@@ -43,8 +57,8 @@ async function handleEvent(ev, env) {
   const q = extractQuery(ev, env);
   if (!q.triggered) return; // 群組沒有 @ / 前綴 → 保持安靜
   const data = await getCombos(env);
-  const text = q.text ? handleQuery(q.text, data, { windowDays: Number(env.WINDOW_DAYS) || 90 }) : HELP;
-  return reply(ev.replyToken, text, token);
+  const out = q.text ? handleRich(q.text, data, { windowDays: Number(env.WINDOW_DAYS) || 180 }) : { text: HELP };
+  return reply(ev.replyToken, out, token);
 }
 
 async function handler(req, res) {

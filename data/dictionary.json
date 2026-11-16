@@ -6,7 +6,7 @@
     "wizard_arrow": {"zh": "魔導幻箭", "en": "Wizard Arrow", "aliases": ["魔導箭", "小魔導", "魔箭", "arrow", "魔導幻箭", "BX-03"], "type": "Stamina", "spin": "R", "code": "BX-03", "weight": "32g"},
     "knight_shield": {"zh": "騎士重盾", "en": "Knight Shield", "aliases": ["騎士盾", "盾牌", "騎盾", "騎士盾牌", "shield", "騎士重盾", "BX-04"], "type": "Defense", "spin": "R", "code": "BX-04", "weight": "32.3g"},
     "knight_lance": {"zh": "騎士長槍", "en": "Knight Lance", "aliases": ["騎士槍", "長槍", "騎槍", "騎士長槍", "lance", "BX-13"], "type": "Defense", "spin": "R", "code": "BX-13", "weight": "32.9g"},
-    "shark_edge": {"zh": "鮫鯊鋒鰭", "en": "Shark Edge", "aliases": ["鯊魚", "小鯊魚", "藍鯊", "鯊", "鮫鯊", "鋒鰭", "鯊魚刃", "shark", "鮫鯊鋒鰭", "BX-14"], "type": "Attack", "spin": "R", "code": "BX-14", "weight": "34.55g"},
+    "shark_edge": {"zh": "鮫鯊鋒鰭", "en": "Shark Edge", "aliases": ["小鯊魚", "藍鯊", "鮫鯊", "鋒鰭", "鯊魚刃", "鮫鯊鋒鰭", "BX-14"], "type": "Attack", "spin": "R", "code": "BX-14", "weight": "34.55g"},
     "leon_claw": {"zh": "雄獅獵爪", "en": "Leon Claw", "aliases": ["獅爪", "獅子爪", "獅王爪", "獅子", "獅王", "leon", "雄獅獵爪", "BX-15"], "type": "Balance", "spin": "R", "code": "BX-15", "weight": "31.37g"},
     "viper_tail": {"zh": "王蛇鞭尾", "en": "Viper Tail", "aliases": ["毒蛇", "蛇尾", "毒蛇尾", "viper", "王蛇鞭尾", "BX-16"], "type": "Stamina", "spin": "R", "code": "BX-16", "weight": "34.43g"},
     "rhino_horn": {"zh": "戰犀號角", "en": "Rhino Horn", "aliases": ["犀牛", "犀角", "犀牛角", "rhino", "戰犀號角", "BX-19"], "type": "Defense", "spin": "R", "code": "BX-19", "weight": "32.93g"},
@@ -46,7 +46,7 @@
     "croco_crunch": {"zh": "巨鱷碾碎", "en": "Croco Crunch", "aliases": ["巨鱷碾碎", "鱷魚", "鱷", "咬牙鱷", "croc"], "type": "Attack", "spin": "R", "weight": "33.8g"},
     "tyranno_roar": {"zh": "暴龍咆哮", "en": "Tyranno Roar", "aliases": ["暴龍咆哮", "暴龍", "恐龍", "強襲暴龍", "暴龍強襲", "roar"], "type": "Attack", "spin": "R", "weight": "36.08g"},
     "tricera_spiky": {"zh": "三角龍刺", "en": "Tricera Spiky", "aliases": ["三角龍刺"], "type": "Defense", "spin": "R", "weight": "29.8g"},
-    "shark_gill": {"zh": "鮫鯊撕裂", "en": "Shark Gill", "aliases": ["鮫鯊撕裂"], "type": "Stamina", "spin": "R", "weight": "29.98g"},
+    "shark_gill": {"zh": "鮫鯊撕裂", "en": "Shark Gill", "aliases": ["鮫鯊撕裂", "撕裂", "鯊魚撕裂"], "type": "Stamina", "spin": "R", "weight": "29.98g"},
     "hells_scythe_2": {"zh": "惡魔紅鐮 2.0", "en": "Hells Scythe 2.0", "aliases": ["惡魔紅鐮 2.0", "CX-20", "惡魔紅鐮2"], "type": "Balance", "spin": "R", "code": "CX-20"},
     "valor_bison": {"zh": "野牛豪勇", "en": "Valor Bison", "aliases": ["野牛", "勇猛野牛", "bison", "野牛豪勇", "Bison Burrow"], "type": "Stamina", "spin": "R", "code": "UX-00", "weight": "41g", "fused": true},
     "dran_buster": {"zh": "蒼龍爆刃", "en": "Dran Buster", "aliases": ["龍劍", "紅龍", "烈焰龍劍", "烈焰龍", "buster", "蒼龍爆刃", "UX-01"], "type": "Attack", "spin": "R", "code": "UX-01", "weight": "36.54g"},
@@ -62,7 +62,7 @@
     "ghost_circle": {"zh": "幽靈元魂", "en": "Ghost Circle", "aliases": ["幽靈元魂", "UX-12"], "type": "Stamina", "spin": "R", "code": "UX-12", "weight": "26.67g"},
     "golem_rock": {"zh": "魔像奇岩", "en": "Golem Rock", "aliases": ["魔像", "石頭人", "岩石魔像", "golem", "魔像奇岩", "UX-13"], "type": "Defense", "spin": "R", "code": "UX-13", "weight": "33.99g"},
     "scorpio_spear": {"zh": "天蠍長矛", "en": "Scorpio Spear", "aliases": ["天蠍長矛", "UX-14"], "type": "Balance", "spin": "R", "code": "UX-14", "weight": "39.67g"},
-    "shark_scale": {"zh": "鮫鯊狂鱗", "en": "Shark Scale", "aliases": ["鮫鯊狂鱗", "UX-15"], "type": "Attack", "spin": "R", "code": "UX-15", "weight": "37.69g"},
+    "shark_scale": {"zh": "鮫鯊狂鱗", "en": "Shark Scale", "aliases": ["鮫鯊狂鱗", "UX-15", "鯊魚", "狂鱗", "鯊魚狂鱗", "大鯊魚"], "type": "Attack", "spin": "R", "code": "UX-15", "weight": "37.69g"},
     "clock_mirage": {"zh": "時鐘幻象", "en": "Clock Mirage", "aliases": ["時鐘幻象", "UX-16"], "type": "Stamina", "spin": "R", "code": "UX-16", "weight": "37.75g"},
     "meteor_dragoon": {"zh": "隕星龍騎士", "en": "Meteor Dragoon", "aliases": ["隕星龍騎士", "UX-17"], "type": "Attack", "spin": "L", "code": "UX-17", "weight": "39.12g"},
     "mummy_curse": {"zh": "古屍詛咒", "en": "Mummy Curse", "aliases": ["古屍詛咒", "UX-18"], "type": "Defense", "spin": "R", "code": "UX-18", "weight": "37.52g"},
@@ -71,7 +71,7 @@
     "hells_nether": {"zh": "惡魔幽冥", "en": "Hells Nether", "aliases": ["惡魔幽冥", "UX-21"], "type": "Balance", "spin": "R", "code": "UX-21", "weight": "42.57g", "fused": true},
     "vanish_lucifer": {"zh": "消逝路西法", "en": "Vanish Lucifer", "aliases": ["消逝路西法", "UX-22"], "type": "Defense", "spin": "R", "code": "UX-22", "fused": true},
     "orochi_cluster": {"zh": "大蛇星叢", "en": "Orochi Cluster", "aliases": ["大蛇星叢"], "type": "Attack", "spin": "R", "weight": "36.62g"},
-    "aero_pegasus": {"zh": "空力天馬", "en": "Aero Pegasus", "aliases": ["飛馬", "天馬", "pegasus", "空力天馬"], "type": "Attack", "spin": "R", "weight": "38.2g"},
+    "aero_pegasus": {"zh": "空力天馬", "en": "Aero Pegasus", "aliases": ["飛馬", "天馬", "pegasus", "空力天馬", "紅空力天馬", "紅天馬"], "type": "Attack", "spin": "R", "weight": "38.2g"},
     "wyvern_hover": {"zh": "飛龍颶風", "en": "Wyvern Hover", "aliases": ["飛龍颶風"], "type": "Defense", "spin": "R", "weight": "35.2g"},
     "dranzer_spiral": {"zh": "烈焰飛鳳S", "en": "Dranzer Spiral", "aliases": ["螺旋", "德蘭澤", "火鳥", "dranzer", "spiral", "德蘭澤螺旋", "烈焰飛鳳S", "BXG-01"], "type": "Balance", "spin": "R", "code": "BXG-01"},
     "driger_slash": {"zh": "銀牙烈虎S", "en": "Driger Slash", "aliases": ["銀牙烈虎S", "BXG-04"], "type": "Balance", "spin": "R", "code": "BXG-04", "weight": "28.5g"},
@@ -357,5 +357,6 @@
     "cx_tiga": {"role": "product", "zh": "迪卡狂怒", "en": "Tiga Rage", "aliases": ["迪卡狂怒", "Tiga Rage"]},
     "cx_kid": {"role": "product", "zh": "基德狩獵", "en": "Kid Hunt", "aliases": ["基德狩獵", "Kid Hunt"]}
   },
-  "_cx說明": "CX 系列零件（輔助戰刃/超越戰刃/主刃/金屬戰刃/紋章/整組商品），資料取自 beybladehub.app，非官方。站上標示輔助戰刃 17/19 款不一致，G、Q 未列正式名稱。"
+  "_cx說明": "CX 系列零件（輔助戰刃/超越戰刃/主刃/金屬戰刃/紋章/整組商品），資料取自 beybladehub.app，非官方。站上標示輔助戰刃 17/19 款不一致，G、Q 未列正式名稱。",
+  "default_aliases": {"鯊魚": {"id": "shark_scale", "note": "「鯊魚」目前多指鮫鯊狂鱗；鮫鯊鋒鰭請打「鋒鰭」、鮫鯊撕裂請打「撕裂」"}}
 }

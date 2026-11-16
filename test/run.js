@@ -29,13 +29,13 @@ ok('純文字 @BOT_NAME 觸發', r.triggered && r.text === '鯊魚配置');
 
 console.log('— 解析');
 const p = (t) => parseQuery(t);
-ok('鯊魚配置 → blade+combo', p('鯊魚配置').mode === 'combo' && p('鯊魚配置').parts[0].ids[0] === 'shark_edge');
+ok('鯊魚配置 → blade+combo', p('鯊魚配置').mode === 'combo' && p('鯊魚配置').parts[0].ids[0] === 'shark_scale');
 ok('魔導神杖 配置（有空白）', p('魔導神杖 配置').parts[0].ids[0] === 'wizard_rod');
 ok('9-60 配置 → ratchet', p('9-60 配置').parts[0].kind === 'ratchet');
 ok('H軸 解釋 → bit H', p('H軸 解釋').parts[0].ids[0] === 'H' && p('H軸 解釋').mode === 'wiki');
 
 ok('黏字 鯊魚lf配置', (() => { const q = p('鯊魚lf配置'); return q.parts.some((x) => x.kind === 'bit' && x.ids[0] === 'LF') && q.parts.some((x) => x.kind === 'blade'); })());
-ok('錯字 鯊玉配置 → 模糊比對', p('鯊玉配置').parts[0]?.ids[0] === 'shark_edge');
+ok('錯字 鯊玉配置 → 模糊比對', p('鯊玉配置').parts[0]?.ids[0] === 'shark_scale');
 ok('英文 wizard rod', p('wizard rod 配置').parts[0].ids[0] === 'wizard_rod');
 ok('全形 ９－６０', p('９－６０配置').ratchets[0] === '9-60');
 ok('指令 → help', p('指令').kind === 'help');
@@ -43,18 +43,21 @@ ok('指令 → help', p('指令').kind === 'help');
 console.log('— 模式 A 輸出');
 const a = run('鯊魚配置');
 console.log(a);
-ok('含熱門 3-60LF', /3-60LF　×\d/.test(a));
-ok('含最新賽事', /最新賽事/.test(a));
-ok('示範資料警語', /示範資料/.test(a));
+ok('鯊魚 = 鮫鯊狂鱗，含熱門 3-60 J', /Shark Scale|鮫鯊狂鱗/.test(a) && /3-60 ?J/.test(a));
+ok('含最新賽事', /最新得名賽事/.test(a));
+ok('含賽事連結', /https:\/\/beybladehub\.app\//.test(a));
+ok('含得名名次', /成人組冠軍/.test(a));
+ok('鯊魚預設說明', /鯊魚」目前多指鮫鯊狂鱗/.test(a));
 const a2 = run('9-60 配置');
-ok('固鎖輪查詢列出戰刃+軸心', /Wizard Rod 9-60|Wizard Rod B/.test(a2) || /Wizard Rod/.test(a2));
+ok('固鎖輪查詢列出戰刃+軸心', /Cobalt Dragoon 9-60E|Cobalt Dragoon E/.test(a2));
 ok('沒資料的零件有說明', /沒有找到/.test(run('獅冠 配置')));
 
 console.log('— 模式 B 輸出');
 const b = run('R軸解釋');
 console.log(b);
 ok('固定五段結構', ['【核心功能】', '【優點】', '【缺點】', '【常見搭配】'].every((s) => b.includes(s)));
-ok('鯊魚解釋', /Shark Edge/.test(run('鯊魚解釋')));
+ok('鯊魚解釋 → 狂鱗', /Shark Scale/.test(run('鯊魚解釋')));
+ok('鋒鰭解釋 → Shark Edge', /Shark Edge/.test(run('鋒鰭解釋')));
 ok('3-60解釋', /3 凸刃/.test(run('3-60解釋')));
 ok('未收錄固鎖輪走通用規則', /2-70/.test(run('2-70 解釋')));
 ok('找不到有建議', /找不到/.test(run('完全不存在的東西配置')));
@@ -82,6 +85,22 @@ console.log(w);
 ok('解釋含【資料】編號', /【資料】編號 BX-14・右旋/.test(w));
 ok('左旋戰刃註記', /左旋/.test(run('蒼穹龍騎士解釋')));
 ok('一體戰刃註記', /一體成型/.test(run('UX-19 解釋')));
+
+console.log('— Flex 卡片');
+const { handleRich } = require('../lib/engine');
+const walk = (n, f) => { f(n); if (n && typeof n === 'object') Object.values(n).forEach((v) => walk(v, f)); };
+for (const q of ['鯊魚配置', '魔導神杖 配置', 'R軸解釋', '龍劍解釋', '指令', 'CX-14 解釋']) {
+  const out = handleRich(q, data, { now: NOW });
+  ok(`${q}：flex 結構合法`, (() => {
+    if (!out.flex) return q === 'CX-14 解釋' ? true : false;
+    const f = JSON.stringify(out.flex);
+    let bad = false;
+    walk(out.flex, (n) => { if (n && n.type === 'text' && (typeof n.text !== 'string' || !n.text)) bad = true; if (n && n.action && !/^https:\/\//.test(n.action.uri)) bad = true; });
+    return !bad && f.length < 30000 && !/undefined|null/.test(f);
+  })());
+}
+const lk = handleRich('鯊魚配置', data, { now: NOW });
+ok('Flex 賽事區塊可點連結', JSON.stringify(lk.flex).includes('"type":"uri"'));
 
 console.log('— CX 系列');
 const cxIds = (t) => p(t).parts.filter((x) => x.kind === 'cx').flatMap((x) => x.ids);
