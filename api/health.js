@@ -7,6 +7,7 @@
 const { getCombos, getEvents } = require('../lib/data');
 const L = require('../lib/line');
 const A = require('../lib/analytics');
+const store = require('../lib/store');
 
 module.exports = async function health(req, res) {
   const env = process.env;
@@ -21,6 +22,7 @@ module.exports = async function health(req, res) {
   if (env.LINE_CHANNEL_ACCESS_TOKEN) {
     try { const r = await L.botInfo(); out.checks.line = { ok: r.ok, status: r.status }; if (!r.ok) out.ok = false; } catch (e) { out.ok = false; out.checks.line = { error: e.message }; }
   }
+  try { await store.cmd('PING'); out.checks.store = { enabled: store.enabled(), ok: true }; } catch (e) { out.ok = false; out.checks.store = { enabled: store.enabled(), ok: false, error: e.message }; }
   out.ms = Date.now() - t0;
   if (!out.ok) await A.recordError('health', JSON.stringify(out.checks).slice(0, 280));
   res.statusCode = out.ok ? 200 : 503;
