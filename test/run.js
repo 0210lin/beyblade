@@ -124,9 +124,11 @@ ok('賽事 Flex 合法', (() => {
 
 console.log('— T 表 / 社群推薦 / beybladehub 賽場配置');
 const tr = handleRich('T表', data, {});
-ok('T表 → 圖片回覆', tr.image === 'tier' && /上蓋/.test(tr.text) && /鮫鯊狂鱗/.test(tr.text));
+ok('T表 → 圖片回覆', tr.image === 'tier' && /T0/.test(tr.text) && /榮耀武神/.test(tr.text));
 ok('大小寫與別名：tier / t 表 / 強度排行', ['tier', 't 表', '強度排行', 'Ｔ表'].every((q) => handleRich(q, data, {}).image === 'tier'));
-ok('T表資料來自高手評級', data.tier && data.tier.experts >= 1 && data.tier.blades.length > 5 && data.tier.bits.length > 3);
+ok('T表資料含上蓋 + 固鎖 + 軸心', data.tier_pro && data.tier_pro.rows.length >= 5 && data.tier_pro.rows[0].cards.some((c) => c.ratchets.length && c.bits.length));
+ok('T表文字備援含推薦固鎖/軸心', /\(.*\/.*\)/.test(tr.text));
+ok('T表圖片檔存在且 < 1MB', (() => { const f = require('fs').statSync(require('path').join(__dirname, '../data/tier.jpg')); return f.size > 50000 && f.size < 1000000; })());
 const sh = run('鯊魚配置');
 ok('配置含社群推薦', /社群推薦/.test(sh) && /常用固鎖/.test(sh));
 ok('配置含 beybladehub 賽場來源', data.combos.some((c) => c.source === 'beybladehub.app/combos'));

@@ -96,7 +96,7 @@
 `scraper/hub_combos.py` 每 6 小時解析 https://beybladehub.app/combos：
 - **賽場實戰配置**（前四名，含 G1／G3／民間賽事、組別、日期、選手）→ 併入 `combos.json`；同一場在手動輸入與該站都有時只留連結較具體的一筆。
 - **社群推薦配置**（固鎖＋軸心＋打法說明、常用固鎖／軸心）→ `combos.json` 的 `recommended`，查「鯊魚配置」時顯示。
-- **高手 T 表** → `combos.json` 的 `tier`，`scraper/make_tier_image.py` 畫成 `data/tier.png`，機器人收到「T表」直接回這張圖（來源網址用 GitHub Raw；可用環境變數 `TIER_IMAGE_URL` 覆寫）。
+- **高手 T 表**：`scraper/hub_tier.py` 解析 beybladehub.app 上的高手 T 表分享頁（預設是阿土「9月 台北G1最強陀螺天梯表」，要換別份就改 `hub_tier.py` 的 `SOURCES`）：每個級別（T0、T0.5、T1…）的上蓋、高手推薦的固鎖／軸心與備註。`scraper/make_tier_image.py` 把它畫成跟原站同款的圖 `data/tier.jpg`（上蓋圖 + 固鎖／軸心小圖，圖片快取在 `.cache/tier-img/`），機器人收到「T表」直接回這張圖（網址用 GitHub Raw；可用環境變數 `TIER_IMAGE_URL` 覆寫）。資料沒變就不重畫。
 抓失敗或解析結果異常少時沿用舊資料。圖片需要 Pillow 與中文字型（Actions 會自動安裝 fonts-noto-cjk）。
 
 ## 賽事查詢資料（雙北）

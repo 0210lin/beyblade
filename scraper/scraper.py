@@ -467,7 +467,7 @@ def main() -> int:
 
     items, added = merge(old_items, new + hub_items, today)
     doc = {"updated_at": old_doc.get("updated_at", ""), "count": len(items), "combos": items,
-           "recommended": recommended, "tier": tier}
+           "recommended": recommended, "tier": tier, "tier_pro": old_doc.get("tier_pro")}
     changed = any(doc[k] != old_doc.get(k) for k in ("combos", "recommended", "tier"))
     if not changed:
         print(f"combos 沒有變化（{len(items)} 筆）")

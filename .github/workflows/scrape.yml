@@ -39,15 +39,25 @@ jobs:
       - name: Update 雙北賽事 (beybladehub.app/events)
         run: python scraper/build_events.py
 
+      - name: Update 高手 T 表 data
+        run: python scraper/build_tier.py
+
+      - name: Cache T-table part images
+        uses: actions/cache@v4
+        with:
+          path: .cache/tier-img
+          key: tier-img-v1-${{ github.run_id }}
+          restore-keys: tier-img-v1-
+
       - name: Render T-table image
         run: python scraper/make_tier_image.py
 
       - name: Commit if changed
         run: |
-          if [ -n "$(git status --porcelain data/combos.json data/events.json data/tier.png)" ]; then
+          if [ -n "$(git status --porcelain data/combos.json data/events.json data/tier_pro.json data/tier.jpg data/tier.hash)" ]; then
             git config user.name  "combo-bot"
             git config user.email "combo-bot@users.noreply.github.com"
-            git add data/combos.json data/events.json data/tier.png
+            git add data/combos.json data/events.json data/tier_pro.json data/tier.jpg data/tier.hash
             git commit -m "chore(data): update combos/events $(date -u +'%Y-%m-%d %H:%M UTC')"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push

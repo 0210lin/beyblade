@@ -38,7 +38,7 @@ async function pushReply(replyToken, messages, token) {
 /** T 表圖片網址：預設用 GitHub Raw 上由排程產生的 data/tier.png */
 function tierImageUrl(env, tier) {
   const base = env.TIER_IMAGE_URL
-    || (env.GITHUB_REPO ? `https://raw.githubusercontent.com/${env.GITHUB_REPO}/${env.GITHUB_BRANCH || 'main'}/data/tier.png` : '');
+    || (env.GITHUB_REPO ? `https://raw.githubusercontent.com/${env.GITHUB_REPO}/${env.GITHUB_BRANCH || 'main'}/data/tier.jpg` : '');
   return base ? `${base}${base.includes('?') ? '&' : '?'}v=${encodeURIComponent((tier && tier.updated) || '')}` : '';
 }
 
@@ -49,7 +49,8 @@ async function reply(replyToken, content, token, env = {}) {
   if (image === 'tier') {
     const url = tierImageUrl(env, tier);
     if (url) {
-      const caption = `📊 戰鬥陀螺 T 表（${(tier && tier.experts) || '?'} 位高手評級・${(tier && tier.updated) || ''}）
+      const caption = `📊 戰鬥陀螺 T 表｜${(tier && tier.title) || ''}
+by ${(tier && tier.author) || '高手'}・更新 ${(tier && tier.updated) || ''}
 資料：beybladehub.app（社群整理，非官方）`;
       const ok = await pushReply(replyToken, [{ type: 'image', originalContentUrl: url, previewImageUrl: url }, { type: 'text', text: caption }], token);
       if (ok) return;

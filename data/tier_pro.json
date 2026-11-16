@@ -1,0 +1,1789 @@
+{
+ "title": "阿土｜9月 台北G1&G1最強陀螺天梯表",
+ "source_url": "https://beybladehub.app/t/2hncQPPe?t=010e597f-e4cd-4a3e-a29c-f4b8a73b9894",
+ "updated": "2026年9月21日",
+ "author": "阿土 Namaste",
+ "views": 63917,
+ "likes": 69,
+ "remixes": 277,
+ "rows": [
+  {
+   "tier": "T0",
+   "color": "#e040fb",
+   "bg": "rgba(100,0,120,0.5)",
+   "cards": [
+    {
+     "img": "https://img.beybladehub.app/blades-db/GlVl.webp",
+     "name": "榮耀武神",
+     "label": "UX-20 榮耀武神",
+     "code": "UX-20",
+     "weight": "43.57",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "E",
+       "img": "https://img.beybladehub.app/bits/E.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "K",
+       "img": "https://img.beybladehub.app/bits/K.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "FF",
+       "img": "https://img.beybladehub.app/bits/FF.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/WzRd.webp",
+     "name": "魔導神杖",
+     "label": "UX-03 魔導神杖",
+     "code": "UX-03",
+     "weight": "35.37",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "1-60",
+       "img": "https://img.beybladehub.app/ratchets/1-60.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "H",
+       "img": "https://img.beybladehub.app/bits/H.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "FB",
+       "img": "https://img.beybladehub.app/bits/FB.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "3-60",
+       "img": "https://img.beybladehub.app/ratchets/3-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "9-60",
+       "img": "https://img.beybladehub.app/ratchets/9-60.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ShSc.webp",
+     "name": "鮫鯊狂鱗",
+     "label": "UX-15 鮫鯊狂鱗",
+     "code": "UX-15",
+     "weight": "37.69",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "J",
+       "img": "https://img.beybladehub.app/bits/J.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LO",
+       "img": "https://img.beybladehub.app/bits/LO.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "Nr",
+       "img": "https://img.beybladehub.app/bits/Nr.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "FB",
+       "img": "https://img.beybladehub.app/bits/FB.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ShSc.webp",
+     "name": "鮫鯊狂鱗",
+     "label": "UX-15 鮫鯊狂鱗",
+     "code": "UX-15",
+     "weight": "37.69",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "7-60",
+       "img": "https://img.beybladehub.app/ratchets/7-60.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      }
+     ],
+     "note": "G1 冠軍"
+    }
+   ]
+  },
+  {
+   "tier": "T0.5",
+   "color": "#f472b6",
+   "bg": "rgba(120,30,80,0.5)",
+   "cards": [
+    {
+     "img": "https://img.beybladehub.app/blades-db/GlVl.webp",
+     "name": "榮耀武神",
+     "label": "UX-20 榮耀武神",
+     "code": "UX-20",
+     "weight": "43.57",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "FB",
+       "img": "https://img.beybladehub.app/bits/FB.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "Nr",
+       "img": "https://img.beybladehub.app/bits/Nr.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "J",
+       "img": "https://img.beybladehub.app/bits/J.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "WB",
+       "img": "https://img.beybladehub.app/bits/WB.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "B",
+       "img": "https://img.beybladehub.app/bits/B.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/MtDg.webp",
+     "name": "隕星龍騎士",
+     "label": "UX-17 隕星龍騎士",
+     "code": "UX-17",
+     "weight": "39.12",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "9-60",
+       "img": "https://img.beybladehub.app/ratchets/9-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "9-65",
+       "img": "https://img.beybladehub.app/ratchets/9-65.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "E",
+       "img": "https://img.beybladehub.app/bits/E.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/MtDg.webp",
+     "name": "隕星龍騎士",
+     "label": "UX-17 隕星龍騎士",
+     "code": "UX-17",
+     "weight": "39.12",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "9-60",
+       "img": "https://img.beybladehub.app/ratchets/9-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "5-70",
+       "img": "https://img.beybladehub.app/ratchets/5-70.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "7-60",
+       "img": "https://img.beybladehub.app/ratchets/7-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "7-70",
+       "img": "https://img.beybladehub.app/ratchets/7-70.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "L",
+       "img": "https://img.beybladehub.app/bits/L.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ArPg.webp",
+     "name": "空力天馬",
+     "label": "空力天馬",
+     "code": "",
+     "weight": "38.2",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "9-60",
+       "img": "https://img.beybladehub.app/ratchets/9-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "1-60",
+       "img": "https://img.beybladehub.app/ratchets/1-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "3-60",
+       "img": "https://img.beybladehub.app/ratchets/3-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "7-60",
+       "img": "https://img.beybladehub.app/ratchets/7-60.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "K",
+       "img": "https://img.beybladehub.app/bits/K.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/metal-Dl.webp",
+     "name": "極變",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "FB",
+       "img": "https://img.beybladehub.app/bits/FB.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "K",
+       "img": "https://img.beybladehub.app/bits/K.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "Nr",
+       "img": "https://img.beybladehub.app/bits/Nr.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-color/ArPg-bxg24.webp",
+     "name": "空力天馬（紅）",
+     "label": "空力天馬",
+     "code": "",
+     "weight": "38.2",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "H",
+       "img": "https://img.beybladehub.app/bits/H.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "1-70",
+       "img": "https://img.beybladehub.app/ratchets/1-70.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "7-60",
+       "img": "https://img.beybladehub.app/ratchets/7-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "1-60",
+       "img": "https://img.beybladehub.app/ratchets/1-60.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/BlGr.webp",
+     "name": "子彈獅鷲",
+     "label": "UX-19 子彈獅鷲",
+     "code": "UX-19",
+     "weight": "61",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "H",
+       "img": "https://img.beybladehub.app/bits/H.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "J",
+       "img": "https://img.beybladehub.app/bits/J.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      }
+     ],
+     "note": "吃陽壽"
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/chip-Em.webp",
+     "name": "帝王",
+     "label": "CX-11 帝王",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/chip-Vl.webp",
+     "name": "戰神",
+     "label": "BXH-14 戰神",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-H.webp",
+     "name": "H",
+     "label": "H",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "tier": "T1",
+   "color": "#ff4444",
+   "bg": "rgba(120,20,20,0.5)",
+   "cards": [
+    {
+     "img": "https://img.beybladehub.app/blades-db/ClMr.webp",
+     "name": "時鐘幻象",
+     "label": "UX-16 時鐘幻象",
+     "code": "UX-16",
+     "weight": "37.75",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "LO",
+       "img": "https://img.beybladehub.app/bits/LO.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "UN",
+       "img": "https://img.beybladehub.app/bits/UN.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "4-55",
+       "img": "https://img.beybladehub.app/ratchets/4-55.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "7-55",
+       "img": "https://img.beybladehub.app/ratchets/7-55.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/CbDg.webp",
+     "name": "蒼穹龍騎士",
+     "label": "BX-34 蒼穹龍騎士",
+     "code": "BX-34",
+     "weight": "37.8",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "E",
+       "img": "https://img.beybladehub.app/bits/E.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "5-60",
+       "img": "https://img.beybladehub.app/ratchets/5-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "9-60",
+       "img": "https://img.beybladehub.app/ratchets/9-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "5-50",
+       "img": "https://img.beybladehub.app/ratchets/5-50.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/WyHv.webp",
+     "name": "飛龍颶風",
+     "label": "飛龍颶風",
+     "code": "",
+     "weight": "35.2",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "J",
+       "img": "https://img.beybladehub.app/bits/J.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "K",
+       "img": "https://img.beybladehub.app/bits/K.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/PhWn.webp",
+     "name": "鳳凰飛翼",
+     "label": "BX-23 鳳凰飛翼",
+     "code": "BX-23",
+     "weight": "38.53",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "7-60",
+       "img": "https://img.beybladehub.app/ratchets/7-60.webp"
+      }
+     ],
+     "note": "亞洲盃季軍"
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Bl.webp",
+     "name": "爆擊",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "H",
+       "img": "https://img.beybladehub.app/bits/H.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Bl.webp",
+     "name": "爆擊",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "H",
+       "img": "https://img.beybladehub.app/bits/H.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "9-70",
+       "img": "https://img.beybladehub.app/ratchets/9-70.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "6-70",
+       "img": "https://img.beybladehub.app/ratchets/6-70.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "7-70",
+       "img": "https://img.beybladehub.app/ratchets/7-70.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/over-F.webp",
+     "name": "F流速",
+     "label": "F流速",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/over-P.webp",
+     "name": "P巔峰",
+     "label": "P巔峰",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-W.webp",
+     "name": "W",
+     "label": "W",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-G-v2.webp",
+     "name": "G",
+     "label": "G",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "tier": "T1.5",
+   "color": "#ff8c00",
+   "bg": "rgba(100,50,0,0.5)",
+   "cards": [
+    {
+     "img": "https://img.beybladehub.app/blades-db/WzRd.webp",
+     "name": "魔導神杖",
+     "label": "UX-03 魔導神杖",
+     "code": "UX-03",
+     "weight": "35.37",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "1-60",
+       "img": "https://img.beybladehub.app/ratchets/1-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "1-70",
+       "img": "https://img.beybladehub.app/ratchets/1-70.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "K",
+       "img": "https://img.beybladehub.app/bits/K.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/HlNt_official.webp",
+     "name": "惡魔幽冥",
+     "label": "UX-21 惡魔幽冥",
+     "code": "UX-21",
+     "weight": "42.57",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "Nr",
+       "img": "https://img.beybladehub.app/bits/Nr.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "W",
+       "img": "https://img.beybladehub.app/bits/W.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "J",
+       "img": "https://img.beybladehub.app/bits/J.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/DrSt.webp",
+     "name": "蒼龍突擊",
+     "label": "BX-49 蒼龍突擊",
+     "code": "BX-49",
+     "weight": "41.25",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "J",
+       "img": "https://img.beybladehub.app/bits/J.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "K",
+       "img": "https://img.beybladehub.app/bits/K.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "3-70",
+       "img": "https://img.beybladehub.app/ratchets/3-70.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "9-60",
+       "img": "https://img.beybladehub.app/ratchets/9-60.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "H",
+       "img": "https://img.beybladehub.app/bits/H.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/MmCr.webp",
+     "name": "古屍詛咒",
+     "label": "UX-18 古屍詛咒",
+     "code": "UX-18",
+     "weight": "37.52",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "W",
+       "img": "https://img.beybladehub.app/bits/W.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "Nr",
+       "img": "https://img.beybladehub.app/bits/Nr.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "9-70",
+       "img": "https://img.beybladehub.app/ratchets/9-70.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "1-70",
+       "img": "https://img.beybladehub.app/ratchets/1-70.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "H",
+       "img": "https://img.beybladehub.app/bits/H.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/metal-Rg.webp",
+     "name": "狂怒",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "9-60",
+       "img": "https://img.beybladehub.app/ratchets/9-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "4-50",
+       "img": "https://img.beybladehub.app/ratchets/4-50.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/DrBs.webp",
+     "name": "蒼龍爆刃",
+     "label": "UX-01 蒼龍爆刃",
+     "code": "UX-01",
+     "weight": "36.54",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "I",
+       "img": "https://img.beybladehub.app/bits/I.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "UF",
+       "img": "https://img.beybladehub.app/bits/UF.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "1-50",
+       "img": "https://img.beybladehub.app/ratchets/1-50.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/SlWl.webp",
+     "name": "霜輝銀狼",
+     "label": "UX-08 霜輝銀狼",
+     "code": "UX-08",
+     "weight": "36.98",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "FB",
+       "img": "https://img.beybladehub.app/bits/FB.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LO",
+       "img": "https://img.beybladehub.app/bits/LO.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "3-60",
+       "img": "https://img.beybladehub.app/ratchets/3-60.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "9-60",
+       "img": "https://img.beybladehub.app/ratchets/9-60.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/metal-Fr.webp",
+     "name": "堡壘",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "H",
+       "img": "https://img.beybladehub.app/bits/H.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "7-70",
+       "img": "https://img.beybladehub.app/ratchets/7-70.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "9-70",
+       "img": "https://img.beybladehub.app/ratchets/9-70.webp"
+      },
+      {
+       "kind": "ratchets",
+       "code": "6-70",
+       "img": "https://img.beybladehub.app/ratchets/6-70.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/metal-Wh.webp",
+     "name": "鞭打",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/metal-Tr-v2.webp",
+     "name": "裂甲",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/TyBt.webp",
+     "name": "暴龍霸擊",
+     "label": "BX-31 暴龍霸擊",
+     "code": "BX-31",
+     "weight": "37",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/GlRc.webp",
+     "name": "魔像奇岩",
+     "label": "UX-13 魔像奇岩",
+     "code": "UX-13",
+     "weight": "33.99",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "FB",
+       "img": "https://img.beybladehub.app/bits/FB.webp"
+      }
+     ],
+     "note": "一定要綠的"
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ScSp.webp",
+     "name": "天蠍長矛",
+     "label": "UX-14 天蠍長矛",
+     "code": "UX-14",
+     "weight": "39.67",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "B",
+       "img": "https://img.beybladehub.app/bits/B.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "FB",
+       "img": "https://img.beybladehub.app/bits/FB.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/metal-Bl.webp",
+     "name": "閃擊",
+     "label": "CX-13 閃擊",
+     "code": "",
+     "weight": "",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/over-T.webp",
+     "name": "T堅韌",
+     "label": "T堅韌",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-J.webp",
+     "name": "J",
+     "label": "J",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-F.webp",
+     "name": "F",
+     "label": "F",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "tier": "T2",
+   "color": "#ffd700",
+   "bg": "rgba(90,70,0,0.5)",
+   "cards": [
+    {
+     "img": "https://img.beybladehub.app/blades-db/DrSw2.webp",
+     "name": "蒼龍神劍 2.0",
+     "label": "BX-00 蒼龍神劍 2.0",
+     "code": "BX-00",
+     "weight": "37.42",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/HvRg.webp",
+     "name": "天界之環",
+     "label": "BX-50 天界之環",
+     "code": "BX-50",
+     "weight": "37.39",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/SmSb.webp",
+     "name": "武士星劍",
+     "label": "UX-09 武士星劍",
+     "code": "UX-09",
+     "weight": "36.39",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "1-60",
+       "img": "https://img.beybladehub.app/ratchets/1-60.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "J",
+       "img": "https://img.beybladehub.app/bits/J.webp"
+      }
+     ],
+     "note": "日G1冠軍"
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Mg.webp",
+     "name": "威能",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "7-60",
+       "img": "https://img.beybladehub.app/ratchets/7-60.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "LR",
+       "img": "https://img.beybladehub.app/bits/LR.webp"
+      }
+     ],
+     "note": "G2冠軍"
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/SmCl.webp",
+     "name": "武士魂斬",
+     "label": "BX-45 武士魂斬",
+     "code": "BX-45",
+     "weight": "35.93",
+     "chips": [
+      {
+       "kind": "bits",
+       "code": "LO",
+       "img": "https://img.beybladehub.app/bits/LO.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "FB",
+       "img": "https://img.beybladehub.app/bits/FB.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "W",
+       "img": "https://img.beybladehub.app/bits/W.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/WhWv.webp",
+     "name": "巨鯨怒濤",
+     "label": "BX-36 巨鯨怒濤",
+     "code": "BX-36",
+     "weight": "38",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/KnMl.webp",
+     "name": "騎士圓甲",
+     "label": "UX-10 騎士圓甲",
+     "code": "UX-10",
+     "weight": "36.74",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/BsBr-v2.webp",
+     "name": "野牛豪勇",
+     "label": "UX-00 野牛豪勇",
+     "code": "UX-00",
+     "weight": "41",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Fr.webp",
+     "name": "閃焰",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Bs.webp",
+     "name": "九尾",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/Redh.webp",
+     "name": "紅浩克",
+     "label": "BXA-03",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/over-O.webp",
+     "name": "O",
+     "label": "O",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-S.webp",
+     "name": "S",
+     "label": "S",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-K.webp",
+     "name": "K",
+     "label": "K",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-Q.webp",
+     "name": "Q",
+     "label": "Q",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "tier": "T2.5",
+   "color": "#fb923c",
+   "bg": "rgba(120,60,20,0.5)",
+   "cards": [
+    {
+     "img": "https://img.beybladehub.app/blades-db/HlCh.webp",
+     "name": "惡魔鎖鏈",
+     "label": "BX-21 惡魔鎖鏈",
+     "code": "BX-21",
+     "weight": "33.2",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "7-60",
+       "img": "https://img.beybladehub.app/ratchets/7-60.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      }
+     ],
+     "note": "G2 冠軍"
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/CrGr.webp",
+     "name": "赫燃天鳳",
+     "label": "BX-38 赫燃天鳳",
+     "code": "BX-38",
+     "weight": "35.18",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "1-70",
+       "img": "https://img.beybladehub.app/ratchets/1-70.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "T",
+       "img": "https://img.beybladehub.app/bits/T.webp"
+      }
+     ],
+     "note": "日 G1 亞軍"
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/OrCl.webp",
+     "name": "大蛇星叢",
+     "label": "大蛇星叢",
+     "code": "",
+     "weight": "36.62",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Ec.webp",
+     "name": "滅世",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Br.webp",
+     "name": "勇氣",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Vl.webp",
+     "name": "伏特",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Fn.webp",
+     "name": "獠牙",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Dr.webp",
+     "name": "幽冥",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ImDr.webp",
+     "name": "衝擊龍神",
+     "label": "UX-11 衝擊龍神",
+     "code": "UX-11",
+     "weight": "39.03",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ShEd.webp",
+     "name": "鮫鯊鋒鰭",
+     "label": "BX-14 鮫鯊鋒鰭",
+     "code": "BX-14",
+     "weight": "34.55",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/CrCr.webp",
+     "name": "巨鱷碾碎",
+     "label": "巨鱷碾碎",
+     "code": "",
+     "weight": "33.8",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/CbDr.webp",
+     "name": "蒼穹龍神",
+     "label": "BX-46 蒼穹龍神",
+     "code": "BX-46",
+     "weight": "37.7",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/UnSt.webp",
+     "name": "獨角刺心",
+     "label": "BX-26 獨角刺心",
+     "code": "BX-26",
+     "weight": "33.48",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/HlSc.webp",
+     "name": "惡魔紅鐮",
+     "label": "BX-02 惡魔紅鐮",
+     "code": "BX-02",
+     "weight": "33.1",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/PhRd.webp",
+     "name": "鳳凰尾翼",
+     "label": "UX-07 鳳凰尾翼",
+     "code": "UX-07",
+     "weight": "34.7",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/over-B.webp",
+     "name": "B破裂",
+     "label": "B破裂",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/over-G.webp",
+     "name": "G守護",
+     "label": "G守護",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-O.webp",
+     "name": "O",
+     "label": "O",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-B.webp",
+     "name": "B",
+     "label": "B",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-Z.webp",
+     "name": "Z",
+     "label": "Z",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-T.webp",
+     "name": "T",
+     "label": "T",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-V.webp",
+     "name": "V",
+     "label": "V",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-D.webp",
+     "name": "D",
+     "label": "D",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-E.webp",
+     "name": "E",
+     "label": "E",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-C.webp",
+     "name": "C",
+     "label": "C",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-M.webp",
+     "name": "M",
+     "label": "M",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "tier": "T3",
+   "color": "#94a3b8",
+   "bg": "rgba(50,55,70,0.5)",
+   "cards": [
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Fl.webp",
+     "name": "烈焰",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Hn.webp",
+     "name": "狩獵",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/TyRr.webp",
+     "name": "暴龍咆哮",
+     "label": "暴龍咆哮",
+     "code": "",
+     "weight": "36.08",
+     "chips": [
+      {
+       "kind": "ratchets",
+       "code": "7-60",
+       "img": "https://img.beybladehub.app/ratchets/7-60.webp"
+      },
+      {
+       "kind": "bits",
+       "code": "R",
+       "img": "https://img.beybladehub.app/bits/R.webp"
+      }
+     ],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/Veno.webp",
+     "name": "猛毒",
+     "label": "BXG-30",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/DrSw.webp",
+     "name": "蒼龍神劍",
+     "label": "BX-01 蒼龍神劍",
+     "code": "BX-01",
+     "weight": "34.8",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/TrPr.webp",
+     "name": "三角強襲",
+     "label": "BX-44 三角強襲",
+     "code": "BX-44",
+     "weight": "36.6",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/WyGl.webp",
+     "name": "飛龍旋翼",
+     "label": "BX-24 飛龍旋翼",
+     "code": "BX-24",
+     "weight": "32",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/KnSh.webp",
+     "name": "騎士重盾",
+     "label": "BX-04 騎士重盾",
+     "code": "BX-04",
+     "weight": "32.3",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/LnCl.webp",
+     "name": "雄獅獵爪",
+     "label": "BX-15 雄獅獵爪",
+     "code": "BX-15",
+     "weight": "31.37",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/LnCr.webp",
+     "name": "雄獅巔峰",
+     "label": "UX-06 雄獅巔峰",
+     "code": "UX-06",
+     "weight": "34.69",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/WzAr.webp",
+     "name": "魔導幻箭",
+     "label": "BX-03 魔導幻箭",
+     "code": "BX-03",
+     "weight": "32",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/WsTg.webp",
+     "name": "皓戰猛虎",
+     "label": "BX-33 皓戰猛虎",
+     "code": "BX-33",
+     "weight": "34.67",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/VpTl.webp",
+     "name": "王蛇鞭尾",
+     "label": "BX-16 王蛇鞭尾",
+     "code": "BX-16",
+     "weight": "34.43",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/GhCr.webp",
+     "name": "幽靈元魂",
+     "label": "UX-12 幽靈元魂",
+     "code": "UX-12",
+     "weight": "26.67",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-A.webp",
+     "name": "A",
+     "label": "A",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "tier": "T4",
+   "color": "#38bdf8",
+   "bg": "rgba(20,75,110,0.5)",
+   "cards": [
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Ar.webp",
+     "name": "至尊",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/main-Rp.webp",
+     "name": "獵魂",
+     "label": "",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/HlHm.webp",
+     "name": "惡魔戰鎚",
+     "label": "UX-02 惡魔戰鎚",
+     "code": "UX-02",
+     "weight": "33.2",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/KnLn.webp",
+     "name": "騎士長槍",
+     "label": "BX-13 騎士長槍",
+     "code": "BX-13",
+     "weight": "32.9",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/DrDg.webp",
+     "name": "蒼龍利刃",
+     "label": "BX-20 蒼龍利刃",
+     "code": "BX-20",
+     "weight": "35.2",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ShDr.webp",
+     "name": "護城龍神",
+     "label": "BX-39 護城龍神",
+     "code": "BX-39",
+     "weight": "32.46",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/PhFt.webp",
+     "name": "鳳凰翔羽",
+     "label": "鳳凰翔羽",
+     "code": "",
+     "weight": "33.45",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/PtSw.webp",
+     "name": "翼龍神翼",
+     "label": "翼龍神翼",
+     "code": "",
+     "weight": "34.53",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/StPg.webp",
+     "name": "暴風天馬",
+     "label": "暴風天馬",
+     "code": "BX-00",
+     "weight": "30.9",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ShSh.webp",
+     "name": "忍者闇影",
+     "label": "UX-05 忍者闇影",
+     "code": "UX-05",
+     "weight": "28.4",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/SpCw.webp",
+     "name": "幻神護甲",
+     "label": "BX-27 幻神護甲",
+     "code": "BX-27",
+     "weight": "32.6",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/S2.webp",
+     "name": "暴風巨神",
+     "label": "暴風巨神",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/SmSt.webp",
+     "name": "武士鋼刃",
+     "label": "武士鋼刃",
+     "code": "",
+     "weight": "31.5",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/MmTs.webp",
+     "name": "猛獁獠牙",
+     "label": "猛獁獠牙",
+     "code": "",
+     "weight": "32.56",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ShGl.webp",
+     "name": "鮫鯊撕裂",
+     "label": "鮫鯊撕裂",
+     "code": "",
+     "weight": "29.98",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/TrSp.webp",
+     "name": "三角龍刺",
+     "label": "三角龍刺",
+     "code": "",
+     "weight": "29.8",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/GtTc.webp",
+     "name": "戰羊阻截",
+     "label": "BX-46 戰羊阻截",
+     "code": "BX-46",
+     "weight": "31.6",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/BlSh.webp",
+     "name": "玄冥戰甲",
+     "label": "BX-35 玄冥戰甲",
+     "code": "BX-35",
+     "weight": "32.55",
+     "chips": [],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "tier": "T5",
+   "color": "#34d399",
+   "bg": "rgba(20,90,65,0.5)",
+   "cards": [
+    {
+     "img": "https://img.beybladehub.app/blades-db/RhHr.webp",
+     "name": "戰犀號角",
+     "label": "BX-19 戰犀號角",
+     "code": "BX-19",
+     "weight": "32.93",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/BrSc.webp",
+     "name": "悍熊猛爪",
+     "label": "BX-37 悍熊猛爪",
+     "code": "BX-37",
+     "weight": "29.9",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-db/ShKn.webp",
+     "name": "忍者刺刀",
+     "label": "忍者刺刀",
+     "code": "",
+     "weight": "31",
+     "chips": [],
+     "note": ""
+    },
+    {
+     "img": "https://img.beybladehub.app/blades-cx/assist-R.webp",
+     "name": "R",
+     "label": "R",
+     "code": "",
+     "weight": "",
+     "chips": [],
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

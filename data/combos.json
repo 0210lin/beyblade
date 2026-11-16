@@ -2124,5 +2124,1070 @@
    }
   ],
   "updated": "2026/10"
+ },
+ "tier_pro": {
+  "title": "阿土｜9月 台北G1&G1最強陀螺天梯表",
+  "author": "阿土 Namaste",
+  "updated": "2026年9月21日",
+  "views": 63917,
+  "source_url": "https://beybladehub.app/t/2hncQPPe?t=010e597f-e4cd-4a3e-a29c-f4b8a73b9894",
+  "rows": [
+   {
+    "tier": "T0",
+    "cards": [
+     {
+      "name": "榮耀武神",
+      "code": "UX-20",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "E",
+       "LR",
+       "K",
+       "R",
+       "FF"
+      ]
+     },
+     {
+      "name": "魔導神杖",
+      "code": "UX-03",
+      "note": "",
+      "ratchets": [
+       "1-60",
+       "3-60",
+       "9-60"
+      ],
+      "bits": [
+       "H",
+       "FB"
+      ]
+     },
+     {
+      "name": "鮫鯊狂鱗",
+      "code": "UX-15",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "J",
+       "LR",
+       "R",
+       "LO",
+       "Nr",
+       "FB"
+      ]
+     },
+     {
+      "name": "鮫鯊狂鱗",
+      "code": "UX-15",
+      "note": "G1 冠軍",
+      "ratchets": [
+       "7-60"
+      ],
+      "bits": [
+       "R"
+      ]
+     }
+    ]
+   },
+   {
+    "tier": "T0.5",
+    "cards": [
+     {
+      "name": "榮耀武神",
+      "code": "UX-20",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "FB",
+       "Nr",
+       "J",
+       "WB",
+       "B"
+      ]
+     },
+     {
+      "name": "隕星龍騎士",
+      "code": "UX-17",
+      "note": "",
+      "ratchets": [
+       "9-60",
+       "9-65"
+      ],
+      "bits": [
+       "E"
+      ]
+     },
+     {
+      "name": "隕星龍騎士",
+      "code": "UX-17",
+      "note": "",
+      "ratchets": [
+       "9-60",
+       "5-70",
+       "7-60",
+       "7-70"
+      ],
+      "bits": [
+       "L"
+      ]
+     },
+     {
+      "name": "空力天馬",
+      "code": "",
+      "note": "",
+      "ratchets": [
+       "9-60",
+       "1-60",
+       "3-60",
+       "7-60"
+      ],
+      "bits": [
+       "R",
+       "K"
+      ]
+     },
+     {
+      "name": "極變",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "FB",
+       "K",
+       "Nr"
+      ]
+     },
+     {
+      "name": "空力天馬（紅）",
+      "code": "",
+      "note": "",
+      "ratchets": [
+       "1-70",
+       "7-60",
+       "1-60"
+      ],
+      "bits": [
+       "LR",
+       "R",
+       "H"
+      ]
+     },
+     {
+      "name": "子彈獅鷲",
+      "code": "UX-19",
+      "note": "吃陽壽",
+      "ratchets": [],
+      "bits": [
+       "H",
+       "J",
+       "R"
+      ]
+     },
+     {
+      "name": "帝王",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "戰神",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "H",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     }
+    ]
+   },
+   {
+    "tier": "T1",
+    "cards": [
+     {
+      "name": "時鐘幻象",
+      "code": "UX-16",
+      "note": "",
+      "ratchets": [
+       "4-55",
+       "7-55"
+      ],
+      "bits": [
+       "LO",
+       "UN"
+      ]
+     },
+     {
+      "name": "蒼穹龍騎士",
+      "code": "BX-34",
+      "note": "",
+      "ratchets": [
+       "5-60",
+       "9-60",
+       "5-50"
+      ],
+      "bits": [
+       "E"
+      ]
+     },
+     {
+      "name": "飛龍颶風",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "J",
+       "K",
+       "LR"
+      ]
+     },
+     {
+      "name": "鳳凰飛翼",
+      "code": "BX-23",
+      "note": "亞洲盃季軍",
+      "ratchets": [
+       "7-60"
+      ],
+      "bits": [
+       "R"
+      ]
+     },
+     {
+      "name": "爆擊",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "H",
+       "LR"
+      ]
+     },
+     {
+      "name": "爆擊",
+      "code": "",
+      "note": "",
+      "ratchets": [
+       "9-70",
+       "6-70",
+       "7-70"
+      ],
+      "bits": [
+       "H"
+      ]
+     },
+     {
+      "name": "F流速",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "P巔峰",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "W",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "G",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     }
+    ]
+   },
+   {
+    "tier": "T1.5",
+    "cards": [
+     {
+      "name": "魔導神杖",
+      "code": "UX-03",
+      "note": "",
+      "ratchets": [
+       "1-60",
+       "1-70"
+      ],
+      "bits": [
+       "R",
+       "K"
+      ]
+     },
+     {
+      "name": "惡魔幽冥",
+      "code": "UX-21",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "R",
+       "Nr",
+       "W",
+       "J"
+      ]
+     },
+     {
+      "name": "蒼龍突擊",
+      "code": "BX-49",
+      "note": "",
+      "ratchets": [
+       "3-70",
+       "9-60"
+      ],
+      "bits": [
+       "J",
+       "K",
+       "LR",
+       "H"
+      ]
+     },
+     {
+      "name": "古屍詛咒",
+      "code": "UX-18",
+      "note": "",
+      "ratchets": [
+       "9-70",
+       "1-70"
+      ],
+      "bits": [
+       "W",
+       "Nr",
+       "H"
+      ]
+     },
+     {
+      "name": "狂怒",
+      "code": "",
+      "note": "",
+      "ratchets": [
+       "9-60",
+       "4-50"
+      ],
+      "bits": [
+       "LR"
+      ]
+     },
+     {
+      "name": "蒼龍爆刃",
+      "code": "UX-01",
+      "note": "",
+      "ratchets": [
+       "1-50"
+      ],
+      "bits": [
+       "I",
+       "UF",
+       "LR"
+      ]
+     },
+     {
+      "name": "霜輝銀狼",
+      "code": "UX-08",
+      "note": "",
+      "ratchets": [
+       "3-60",
+       "9-60"
+      ],
+      "bits": [
+       "FB",
+       "LO"
+      ]
+     },
+     {
+      "name": "堡壘",
+      "code": "",
+      "note": "",
+      "ratchets": [
+       "7-70",
+       "9-70",
+       "6-70"
+      ],
+      "bits": [
+       "H"
+      ]
+     },
+     {
+      "name": "鞭打",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "裂甲",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "暴龍霸擊",
+      "code": "BX-31",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "魔像奇岩",
+      "code": "UX-13",
+      "note": "一定要綠的",
+      "ratchets": [],
+      "bits": [
+       "R",
+       "LR",
+       "FB"
+      ]
+     },
+     {
+      "name": "天蠍長矛",
+      "code": "UX-14",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "B",
+       "R",
+       "FB"
+      ]
+     },
+     {
+      "name": "閃擊",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "LR"
+      ]
+     },
+     {
+      "name": "T堅韌",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "J",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "F",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     }
+    ]
+   },
+   {
+    "tier": "T2",
+    "cards": [
+     {
+      "name": "蒼龍神劍 2.0",
+      "code": "BX-00",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "天界之環",
+      "code": "BX-50",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "武士星劍",
+      "code": "UX-09",
+      "note": "日G1冠軍",
+      "ratchets": [
+       "1-60"
+      ],
+      "bits": [
+       "J"
+      ]
+     },
+     {
+      "name": "威能",
+      "code": "",
+      "note": "G2冠軍",
+      "ratchets": [
+       "7-60"
+      ],
+      "bits": [
+       "LR"
+      ]
+     },
+     {
+      "name": "武士魂斬",
+      "code": "BX-45",
+      "note": "",
+      "ratchets": [],
+      "bits": [
+       "LO",
+       "FB",
+       "W"
+      ]
+     },
+     {
+      "name": "巨鯨怒濤",
+      "code": "BX-36",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "騎士圓甲",
+      "code": "UX-10",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "野牛豪勇",
+      "code": "UX-00",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "閃焰",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "九尾",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "紅浩克",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "O",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "S",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "K",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "Q",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     }
+    ]
+   },
+   {
+    "tier": "T2.5",
+    "cards": [
+     {
+      "name": "惡魔鎖鏈",
+      "code": "BX-21",
+      "note": "G2 冠軍",
+      "ratchets": [
+       "7-60"
+      ],
+      "bits": [
+       "R"
+      ]
+     },
+     {
+      "name": "赫燃天鳳",
+      "code": "BX-38",
+      "note": "日 G1 亞軍",
+      "ratchets": [
+       "1-70"
+      ],
+      "bits": [
+       "T"
+      ]
+     },
+     {
+      "name": "大蛇星叢",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "滅世",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "勇氣",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "伏特",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "獠牙",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "幽冥",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "衝擊龍神",
+      "code": "UX-11",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "鮫鯊鋒鰭",
+      "code": "BX-14",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "巨鱷碾碎",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "蒼穹龍神",
+      "code": "BX-46",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "獨角刺心",
+      "code": "BX-26",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "惡魔紅鐮",
+      "code": "BX-02",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "鳳凰尾翼",
+      "code": "UX-07",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "B破裂",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "G守護",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "O",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "B",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "Z",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "T",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "V",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "D",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "E",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "C",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "M",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     }
+    ]
+   },
+   {
+    "tier": "T3",
+    "cards": [
+     {
+      "name": "烈焰",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "狩獵",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "暴龍咆哮",
+      "code": "",
+      "note": "",
+      "ratchets": [
+       "7-60"
+      ],
+      "bits": [
+       "R"
+      ]
+     },
+     {
+      "name": "猛毒",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "蒼龍神劍",
+      "code": "BX-01",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "三角強襲",
+      "code": "BX-44",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "飛龍旋翼",
+      "code": "BX-24",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "騎士重盾",
+      "code": "BX-04",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "雄獅獵爪",
+      "code": "BX-15",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "雄獅巔峰",
+      "code": "UX-06",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "魔導幻箭",
+      "code": "BX-03",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "皓戰猛虎",
+      "code": "BX-33",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "王蛇鞭尾",
+      "code": "BX-16",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "幽靈元魂",
+      "code": "UX-12",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "A",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     }
+    ]
+   },
+   {
+    "tier": "T4",
+    "cards": [
+     {
+      "name": "至尊",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "獵魂",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "惡魔戰鎚",
+      "code": "UX-02",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "騎士長槍",
+      "code": "BX-13",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "蒼龍利刃",
+      "code": "BX-20",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "護城龍神",
+      "code": "BX-39",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "鳳凰翔羽",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "翼龍神翼",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "暴風天馬",
+      "code": "BX-00",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "忍者闇影",
+      "code": "UX-05",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "幻神護甲",
+      "code": "BX-27",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "暴風巨神",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "武士鋼刃",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "猛獁獠牙",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "鮫鯊撕裂",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "三角龍刺",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "戰羊阻截",
+      "code": "BX-46",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "玄冥戰甲",
+      "code": "BX-35",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     }
+    ]
+   },
+   {
+    "tier": "T5",
+    "cards": [
+     {
+      "name": "戰犀號角",
+      "code": "BX-19",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "悍熊猛爪",
+      "code": "BX-37",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "忍者刺刀",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     },
+     {
+      "name": "R",
+      "code": "",
+      "note": "",
+      "ratchets": [],
+      "bits": []
+     }
+    ]
+   }
+  ]
  }
 }
