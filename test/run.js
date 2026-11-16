@@ -102,6 +102,26 @@ for (const q of ['鯊魚配置', '魔導神杖 配置', 'R軸解釋', '龍劍解
 const lk = handleRich('鯊魚配置', data, { now: NOW });
 ok('Flex 賽事區塊可點連結', JSON.stringify(lk.flex).includes('"type":"uri"'));
 
+console.log('— 雙北賽事查詢');
+const evDoc = require('../data/events.json');
+const evq = (t, today = '2026-11-17') => handleRich(t, data, { events: evDoc, today });
+ok('資料只含雙北', evDoc.events.every((e) => e.city === '台北市' || e.city === '新北市'));
+ok('本週賽事有結果', /雙北賽事｜本週/.test(evq('本週賽事').text) && /夾子園-汐止/.test(evq('本週賽事').text));
+ok('板橋 賽事 週六 → 東fun', /東fun/.test(evq('板橋 賽事 週六').text) && !/中和/.test(evq('板橋 賽事 週六').text));
+ok('台北 賽事 只含台北市', (() => { const r = evq('台北 賽事 11/21').text; return /CardMaster/.test(r) && !/新莊/.test(r); })());
+ok('新北 公開組 週末', /新北市・公開組・本週末/.test(evq('週末 新北 賽事 公開組').text));
+ok('場館名 夾子園', /夾子園/.test(evq('夾子園 賽事').text));
+ok('其他縣市 → 只收錄雙北', /只收錄雙北/.test(evq('台中賽事').text) && /只收錄雙北/.test(evq('桃園 比賽').text));
+ok('基隆路是台北，不是基隆市', !/只收錄雙北/.test(evq('基隆路 賽事').text));
+ok('FB 賽事（北投智仁里）', /智仁里/.test(evq('北投 賽事 11/21').text));
+ok('賽事查詢不影響配置查詢', /近期上位配置/.test(run('鯊魚配置')));
+ok('賽事 Flex 合法', (() => {
+  const out = evq('本週賽事');
+  let bad = false;
+  walk(out.flex, (n) => { if (n && n.type === 'text' && (typeof n.text !== 'string' || !n.text)) bad = true; if (n && n.action && !/^https:\/\//.test(n.action.uri)) bad = true; });
+  return !bad && JSON.stringify(out.flex).includes('"type":"uri"') && !/undefined|null/.test(JSON.stringify(out.flex));
+})());
+
 console.log('— CX 系列');
 const cxIds = (t) => p(t).parts.filter((x) => x.kind === 'cx').flatMap((x) => x.ids);
 ok('J輔助 → assist_j', cxIds('J輔助解釋')[0] === 'assist_j');

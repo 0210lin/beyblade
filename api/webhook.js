@@ -5,7 +5,7 @@
  */
 const crypto = require('crypto');
 const { handleRich, extractQuery, HELP } = require('../lib/engine');
-const { getCombos } = require('../lib/data');
+const { getCombos, getEvents } = require('../lib/data');
 
 function readRaw(req) {
   return new Promise((resolve, reject) => {
@@ -56,8 +56,8 @@ async function handleEvent(ev, env) {
 
   const q = extractQuery(ev, env);
   if (!q.triggered) return; // 群組沒有 @ / 前綴 → 保持安靜
-  const data = await getCombos(env);
-  const out = q.text ? handleRich(q.text, data, { windowDays: Number(env.WINDOW_DAYS) || 180 }) : { text: HELP };
+  const [data, events] = await Promise.all([getCombos(env), getEvents(env)]);
+  const out = q.text ? handleRich(q.text, data, { windowDays: Number(env.WINDOW_DAYS) || 180, events }) : { text: HELP };
   return reply(ev.replyToken, out, token);
 }
 
