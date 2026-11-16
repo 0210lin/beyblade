@@ -67,3 +67,11 @@ jobs:
           else
             echo "data 沒有變更"
           fi
+
+      - name: Keep bot warm + health check
+        if: always()
+        env:
+          BOT_URL: ${{ vars.BOT_URL || 'https://beyblade-rho.vercel.app' }}
+        run: |
+          curl -fsS -m 20 "$BOT_URL/api/webhook" || echo "webhook ping failed"
+          curl -fsS -m 30 "$BOT_URL/api/health" || echo "health check failed"

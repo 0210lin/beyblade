@@ -1,9 +1,15 @@
 {
   "functions": {
-    "api/webhook.js": {
-      "includeFiles": "data/**",
-      "maxDuration": 10
-    }
+    "api/webhook.js": { "includeFiles": "data/**", "maxDuration": 10 },
+    "api/admin.js": { "includeFiles": "assets/**", "maxDuration": 15 },
+    "api/health.js": { "includeFiles": "data/**", "maxDuration": 10 }
   },
-  "rewrites": [{ "source": "/webhook", "destination": "/api/webhook" }]
+  "rewrites": [
+    { "source": "/webhook", "destination": "/api/webhook" },
+    { "source": "/admin", "destination": "/api/admin" },
+    { "source": "/admin/:path*", "destination": "/api/admin?path=:path*" }
+  ],
+  "crons": [
+    { "path": "/api/health", "schedule": "0 21 * * *" }
+  ]
 }

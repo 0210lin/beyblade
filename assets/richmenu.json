@@ -1,0 +1,89 @@
+{
+ "name": "陀螺助理主選單",
+ "chatBarText": "☰ 主選單",
+ "image": "richmenu.jpg",
+ "size": {
+  "width": 2500,
+  "height": 1686
+ },
+ "areas": [
+  {
+   "bounds": {
+    "x": 40,
+    "y": 270,
+    "width": 780,
+    "height": 648
+   },
+   "action": {
+    "type": "message",
+    "label": "熱門配置",
+    "text": "熱門配置"
+   }
+  },
+  {
+   "bounds": {
+    "x": 860,
+    "y": 270,
+    "width": 780,
+    "height": 648
+   },
+   "action": {
+    "type": "message",
+    "label": "T表",
+    "text": "T表"
+   }
+  },
+  {
+   "bounds": {
+    "x": 1680,
+    "y": 270,
+    "width": 780,
+    "height": 648
+   },
+   "action": {
+    "type": "message",
+    "label": "雙北賽事",
+    "text": "本週賽事"
+   }
+  },
+  {
+   "bounds": {
+    "x": 40,
+    "y": 958,
+    "width": 780,
+    "height": 648
+   },
+   "action": {
+    "type": "message",
+    "label": "零件解釋",
+    "text": "零件解釋"
+   }
+  },
+  {
+   "bounds": {
+    "x": 860,
+    "y": 958,
+    "width": 780,
+    "height": 648
+   },
+   "action": {
+    "type": "message",
+    "label": "新品發售",
+    "text": "新品發售"
+   }
+  },
+  {
+   "bounds": {
+    "x": 1680,
+    "y": 958,
+    "width": 780,
+    "height": 648
+   },
+   "action": {
+    "type": "message",
+    "label": "使用說明",
+    "text": "指令"
+   }
+  }
+ ]
+}

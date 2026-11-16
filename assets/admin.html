@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0b1020">
+<title>陀螺助理 後台</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2e;--panel2:#18223a;--line:#243050;--ink:#eaf0fb;--sub:#8fa0bd;--gold:#f5c542;--blue:#5aa9ff;--green:#3ddc97;--red:#ff5d73;--orange:#ff9f43;--r:14px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif}
+a{color:var(--blue);text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.hide{display:none!important}
+/* 登入 */
+.login{min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(1200px 600px at 50% -10%,#1d2a4d 0,transparent 60%)}
+.login .card{width:100%;max-width:380px;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 20px 60px #0008}
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.logo .mark{width:44px;height:44px;border-radius:12px;background:conic-gradient(from 200deg,#f5c542,#ff9f43,#f5c542);display:grid;place-items:center;color:#1a1200;font-weight:900;font-size:22px}
+.logo b{font-size:18px}.logo small{display:block;color:var(--gold);letter-spacing:2px;font-size:10px}
+input[type=text],input[type=password],input[type=search],textarea,select{width:100%;background:#0d1426;border:1px solid var(--line);border-radius:10px;padding:11px 12px;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--gold)}
+textarea{min-height:110px;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;background:var(--gold);color:#1a1200}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn.red{background:var(--red);color:#fff}.btn.blue{background:var(--blue);color:#06142b}.btn.sm{padding:6px 10px;font-size:13px}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.err{color:var(--red);font-size:13px;min-height:18px;margin-top:8px}
+/* 版面 */
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:10px 16px;padding-top:max(10px,env(safe-area-inset-top));background:#0b1020ee;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .logo{margin:0}.top .logo .mark{width:34px;height:34px;font-size:17px;border-radius:10px}.top .grow{flex:1}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:99px;background:var(--panel2);border:1px solid var(--line);font-size:12px;color:var(--sub)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--sub)}.dot.ok{background:var(--green);box-shadow:0 0 8px var(--green)}.dot.bad{background:var(--red)}.dot.warn{background:var(--orange)}
+.shell{display:grid;grid-template-columns:1fr;min-height:calc(100vh - 56px)}
+.side{display:none}
+main{padding:16px;padding-bottom:96px;max-width:1280px;width:100%;margin:0 auto}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(7,1fr);background:#0d1426f2;backdrop-filter:blur(12px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.tabbar button{background:none;border:0;padding:8px 2px 7px;color:var(--sub);font-size:10px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer}
+.tabbar button i,.side button i{font-style:normal;font-size:19px}
+.tabbar button.on{color:var(--gold)}
+@media(min-width:900px){
+ .shell{grid-template-columns:220px 1fr}
+ .side{display:block;border-right:1px solid var(--line);padding:16px 10px;position:sticky;top:56px;height:calc(100vh - 56px)}
+ .side button{display:flex;align-items:center;gap:10px;width:100%;background:none;border:0;color:var(--sub);padding:11px 12px;border-radius:10px;cursor:pointer;text-align:left;font-size:15px;margin-bottom:2px}
+ .side button:hover{background:var(--panel)}.side button.on{background:var(--panel2);color:var(--gold)}
+ .tabbar{display:none}main{padding:24px}
+}
+h2{margin:0 0 14px;font-size:20px}h3{margin:0 0 10px;font-size:15px;color:var(--sub);font-weight:600}
+.grid{display:grid;gap:12px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:700px){.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1100px){.two{display:grid;grid-template-columns:1.6fr 1fr;gap:12px}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:12px}
+.stat{padding:14px 16px;background:linear-gradient(160deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:var(--r)}
+.stat .k{color:var(--sub);font-size:12px}.stat .v{font-size:28px;font-weight:800;line-height:1.2;margin-top:2px}.stat .d{font-size:12px;color:var(--sub);margin-top:2px}
+.up{color:var(--green)}.down{color:var(--red)}.gold{color:var(--gold)}
+.row{display:flex;align-items:center;gap:12px}.row.wrap{flex-wrap:wrap}.grow{flex:1;min-width:0}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--panel2) center/cover;flex:none;border:2px solid var(--line)}
+.list .it{display:flex;align-items:center;gap:12px;padding:11px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.list .it:last-child{border-bottom:0}.list .it:hover{background:#ffffff06}
+.name{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.muted{color:var(--sub);font-size:12px}
+.tag{display:inline-block;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700;border:1px solid var(--line);color:var(--sub)}
+.tag.friend{color:var(--green);border-color:#3ddc9755}.tag.unfollowed{color:var(--red);border-color:#ff5d7355}.tag.seen{color:var(--blue);border-color:#5aa9ff55}.tag.blocked{color:var(--orange);border-color:#ff9f4355}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px}
+.chip{flex:none;padding:6px 14px;border-radius:99px;border:1px solid var(--line);background:var(--panel);color:var(--sub);cursor:pointer;font-size:13px}.chip.on{background:var(--gold);color:#1a1200;border-color:var(--gold);font-weight:700}
+.bars{display:flex;align-items:flex-end;gap:5px;height:130px;padding-top:8px}
+.bars .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0;gap:2px}
+.bars .stack{width:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:1px}
+.bars .b{border-radius:4px 4px 0 0;min-height:1px;width:100%}
+.bars small{font-size:9px;color:var(--sub)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--sub);margin-top:6px;flex-wrap:wrap}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.feed .ev{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.ev .ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--panel2);flex:none;font-size:15px}
+.ev .tx{font-size:14px;word-break:break-all}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}.kv dt{color:var(--sub)}.kv dd{margin:0;word-break:break-all}
+.bar{height:8px;background:#0d1426;border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--orange))}
+.warn{background:#ff9f4318;border:1px solid #ff9f4355;color:#ffd6a3;border-radius:12px;padding:12px 14px;margin-bottom:12px;font-size:14px}
+.modal{position:fixed;inset:0;z-index:50;background:#000a;display:flex;align-items:flex-end;justify-content:center}
+.sheet{width:100%;max-width:560px;max-height:88vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:20px 20px 0 0;padding:18px}
+@media(min-width:700px){.modal{align-items:center}.sheet{border-radius:20px}}
+pre{white-space:pre-wrap;word-break:break-word;background:#0d1426;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:13px;margin:8px 0 0}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#0b1020;padding:10px 16px;border-radius:99px;font-weight:700;z-index:99;box-shadow:0 8px 30px #0008}
+.sw{display:flex;align-items:center;gap:10px}.sw input{width:20px;height:20px;accent-color:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}th{color:var(--sub);font-weight:600;font-size:12px}
+</style>
+</head>
+<body>
+<div id="login" class="login hide">
+  <form class="card" id="loginForm">
+    <div class="logo"><div class="mark">螺</div><div><b>陀螺助理 後台</b><small>BEYBLADE X ASSISTANT</small></div></div>
+    <input type="password" id="pw" placeholder="後台密碼" autocomplete="current-password" autofocus>
+    <div class="err" id="loginErr"></div>
+    <button class="btn" style="width:100%;margin-top:8px" type="submit">登入</button>
+    <p class="muted" style="margin:14px 0 0">密碼是你在 Vercel 設定的 <code>ADMIN_PASSWORD</code>。</p>
+  </form>
+</div>
+
+<div id="app" class="hide">
+  <header class="top">
+    <div class="logo"><div class="mark">螺</div><div><b>陀螺助理</b><small>ADMIN</small></div></div>
+    <div class="grow"></div>
+    <span class="pill" id="statusPill"><span class="dot" id="statusDot"></span><span id="statusText">檢查中</span></span>
+    <button class="btn ghost sm" id="refreshBtn">重新整理</button>
+    <button class="btn ghost sm" id="logoutBtn">登出</button>
+  </header>
+  <div class="shell">
+    <nav class="side" id="side"></nav>
+    <main id="view"></main>
+  </div>
+  <nav class="tabbar" id="tabbar"></nav>
+</div>
+
+<script>
+(function(){
+'use strict';
+var TABS=[['overview','📊','總覽'],['friends','👥','好友'],['activity','⚡','動態'],['groups','💬','群組'],['insights','🔎','查詢'],['system','🩺','狀態'],['tools','🛠','工具']];
+var $=function(s,r){return (r||document).querySelector(s)};
+var view=$('#view'), state={tab:'overview',fr:{q:'',status:'',page:0}};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function toast(t){var d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},2600)}
+function api(path,opt){opt=opt||{};var o={method:opt.body?'POST':'GET',credentials:'same-origin',headers:{}};if(opt.body){o.body=JSON.stringify(opt.body);o.headers['Content-Type']='application/json'}
+ return fetch('/admin/'+path,o).then(function(r){if(r.status===401){showLogin();throw new Error('unauthorized')}return r.json().then(function(j){if(!r.ok)throw new Error(j.error||('HTTP '+r.status));return j})})}
+function ago(iso){if(!iso)return '—';var s=(Date.now()-new Date(iso).getTime())/1000;if(s<60)return '剛剛';if(s<3600)return Math.floor(s/60)+' 分鐘前';if(s<86400)return Math.floor(s/3600)+' 小時前';if(s<86400*30)return Math.floor(s/86400)+' 天前';return fmt(iso).slice(0,10)}
+function fmt(iso){if(!iso)return '—';try{return new Date(iso).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false,month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',year:'numeric'}).replace(/\//g,'-')}catch(e){return iso}}
+function av(u,sz){return '<div class="avatar" style="'+(u&&u.pic?'background-image:url('+esc(u.pic)+')':'')+(sz?';width:'+sz+'px;height:'+sz+'px':'')+'"></div>'}
+function statusTag(u){if(u.blocked)return '<span class="tag blocked">已停用</span>';var m={friend:'好友',unfollowed:'已封鎖/退出',seen:'互動過'};return '<span class="tag '+esc(u.status)+'">'+(m[u.status]||esc(u.status))+'</span>'}
+var KIND={combo:'配置',wiki:'解釋',event:'賽事',tier:'T表',menu:'選單',help:'說明',unknown:'未辨識',other:'其他',maintenance:'維護'};
+var KCOL={combo:'#f5c542',wiki:'#5aa9ff',event:'#3ddc97',tier:'#ff9f43',menu:'#b48cff',help:'#8fa0bd',unknown:'#ff5d73',other:'#8fa0bd'};
+
+function showLogin(){$('#app').classList.add('hide');$('#login').classList.remove('hide')}
+function showApp(){$('#login').classList.add('hide');$('#app').classList.remove('hide');nav();go(state.tab)}
+$('#loginForm').addEventListener('submit',function(e){e.preventDefault();$('#loginErr').textContent='';
+ fetch('/admin/api/login',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:$('#pw').value})})
+ .then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.error||'登入失敗');return j})}).then(function(){$('#pw').value='';showApp()}).catch(function(err){$('#loginErr').textContent=err.message})});
+$('#logoutBtn').onclick=function(){fetch('/admin/api/logout',{method:'POST',credentials:'same-origin'}).then(showLogin)};
+$('#refreshBtn').onclick=function(){go(state.tab)};
+
+function nav(){var h='';TABS.forEach(function(t){h+='<button data-t="'+t[0]+'" class="'+(state.tab===t[0]?'on':'')+'"><i>'+t[1]+'</i><span>'+t[2]+'</span></button>'});
+ $('#side').innerHTML=h;$('#tabbar').innerHTML=h;
+ document.querySelectorAll('#side button,#tabbar button').forEach(function(b){b.onclick=function(){go(b.dataset.t)}})}
+function go(t){state.tab=t;nav();view.innerHTML='<p class="muted">載入中…</p>';window.scrollTo(0,0);
+ ({overview:vOverview,friends:vFriends,activity:vActivity,groups:vGroups,insights:vInsights,system:vSystem,tools:vTools})[t]().catch(function(e){if(e.message!=='unauthorized')view.innerHTML='<div class="warn">載入失敗：'+esc(e.message)+'</div>'})}
+
+function stat(k,v,d,cls){return '<div class="stat"><div class="k">'+k+'</div><div class="v '+(cls||'')+'">'+v+'</div><div class="d">'+(d||'')+'</div></div>'}
+function chart(series,defs){var max=1;series.forEach(function(s){var t=0;defs.forEach(function(d){t+=s[d.k]||0});if(t>max)max=t});
+ var h='<div class="bars">';series.forEach(function(s){h+='<div class="col"><div class="stack" style="height:100px">';defs.forEach(function(d){var v=s[d.k]||0;h+='<div class="b" title="'+d.n+' '+v+'" style="height:'+Math.round(v/max*100)+'px;background:'+d.c+'"></div>'});h+='</div><small>'+s.date.slice(8)+'</small></div>'});
+ h+='</div><div class="legend">';defs.forEach(function(d){h+='<span><i style="background:'+d.c+'"></i>'+d.n+'</span>'});return h+'</div>'}
+
+function vOverview(){return api('api/overview').then(function(o){
+ var h='';
+ if(!o.storeEnabled)h+='<div class="warn"><b>尚未連接資料庫</b>：目前只有暫存紀錄，好友名單與統計重新部署後會消失。請到 Vercel → Storage 建立 Upstash Redis，詳見說明文件。</div>';
+ h+='<h2>總覽</h2><div class="grid g4">'+stat('好友數',o.friends,'已封鎖／退出 '+o.unfollowed)+stat('今日新增好友','+'+o.today.follow,'今日退出 '+o.today.unfollow,o.today.follow?'up':'')+stat('今日查詢',o.today.msg,'近 7 天 '+o.week.msg)+stat('群組數',o.groups,'已退出 '+o.groupsLeft)+'</div>';
+ h+='<div class="grid g3" style="margin-top:12px">'+stat('近 7 天新增好友','+'+o.week.follow,'退出 '+o.week.unfollow,'up')+stat('平均回覆時間',(o.avgMs==null?'—':o.avgMs+' ms'),'近 7 天')+stat('今日錯誤',o.today.err,o.today.err?'請到「狀態」查看':'一切正常',o.today.err?'down':'')+'</div>';
+ h+='<div class="two" style="margin-top:12px"><div class="card"><h3>近 14 天：好友變化</h3>'+chart(o.series,[{k:'follow',n:'新增好友',c:'#3ddc97'},{k:'unfollow',n:'封鎖／退出',c:'#ff5d73'}])+'</div>';
+ h+='<div class="card"><h3>近 14 天：查詢量</h3>'+chart(o.series,[{k:'msg',n:'查詢',c:'#f5c542'}])+'</div></div>';
+ var tot=0;Object.keys(o.kinds).forEach(function(k){tot+=o.kinds[k]});
+ h+='<div class="two"><div class="card"><h3>最新加入的好友</h3><div class="list">'+(o.newest.length?o.newest.map(function(u){return '<div class="it" data-u="'+esc(u.id)+'">'+av(u)+'<div class="grow"><div class="name">'+esc(u.name)+'</div><div class="muted">'+ago(u.followedAt)+' · '+fmt(u.followedAt)+'</div></div></div>'}).join(''):'<p class="muted">還沒有人加好友（或尚未連接資料庫）。</p>')+'</div></div>';
+ h+='<div class="card"><h3>近 7 天：查詢類型</h3>'+(tot?Object.keys(o.kinds).sort(function(a,b){return o.kinds[b]-o.kinds[a]}).map(function(k){var p=Math.round(o.kinds[k]/tot*100);return '<div style="margin:8px 0"><div class="row"><span class="grow">'+(KIND[k]||k)+'</span><b>'+o.kinds[k]+'</b><span class="muted" style="width:38px;text-align:right">'+p+'%</span></div><div class="bar"><i style="width:'+p+'%;background:'+(KCOL[k]||'#f5c542')+'"></i></div></div>'}).join(''):'<p class="muted">還沒有資料。</p>')+'</div></div>';
+ view.innerHTML=h;bindUsers()})}
+
+function bindUsers(){document.querySelectorAll('[data-u]').forEach(function(e){e.onclick=function(){userSheet(e.dataset.u)}})}
+
+function vFriends(){var f=state.fr;
+ return api('api/users?q='+encodeURIComponent(f.q)+'&status='+f.status+'&offset='+f.page*50+'&limit=50').then(function(r){
+ var h='<div class="row wrap" style="justify-content:space-between"><h2>好友 <span class="muted">共 '+r.total+' 位</span></h2><div class="row"><button class="btn ghost sm" id="refProf">更新名稱／頭貼</button><a class="btn ghost sm" href="/admin/api/export/users">匯出 CSV</a></div></div>';
+ h+='<input type="search" id="q" placeholder="搜尋名稱、userId、最後訊息" value="'+esc(f.q)+'" style="margin-bottom:10px">';
+ h+='<div class="chips">'+[['','全部'],['friend','好友'],['unfollowed','已封鎖/退出'],['seen','僅互動'],['blocked','已停用']].map(function(c){return '<span class="chip '+(f.status===c[0]?'on':'')+'" data-s="'+c[0]+'">'+c[1]+'</span>'}).join('')+'</div>';
+ h+='<div class="card list">'+(r.users.length?r.users.map(function(u){return '<div class="it" data-u="'+esc(u.id)+'">'+av(u)+'<div class="grow"><div class="row" style="gap:8px"><span class="name">'+esc(u.name||'(未知)')+'</span>'+statusTag(u)+'</div><div class="muted">'+(u.followedAt?'加入 '+fmt(u.followedAt)+' · ':'')+'最後互動 '+ago(u.lastSeen)+' · 查詢 '+(u.msgs||0)+' 次</div>'+(u.lastText?'<div class="muted" style="margin-top:2px">「'+esc(u.lastText)+'」</div>':'')+'</div></div>'}).join(''):'<p class="muted">沒有符合的資料。</p>')+'</div>';
+ var pages=Math.ceil(r.total/50);if(pages>1)h+='<div class="row" style="justify-content:center"><button class="btn ghost sm" id="pp" '+(f.page<=0?'disabled':'')+'>上一頁</button><span class="muted">'+(f.page+1)+' / '+pages+'</span><button class="btn ghost sm" id="np" '+(f.page+1>=pages?'disabled':'')+'>下一頁</button></div>';
+ view.innerHTML=h;bindUsers();
+ var q=$('#q');var t;q.oninput=function(){clearTimeout(t);t=setTimeout(function(){f.q=q.value;f.page=0;go('friends')},350)};
+ document.querySelectorAll('.chip').forEach(function(c){c.onclick=function(){f.status=c.dataset.s;f.page=0;go('friends')}});
+ if($('#pp'))$('#pp').onclick=function(){f.page--;go('friends')};if($('#np'))$('#np').onclick=function(){f.page++;go('friends')};
+ $('#refProf').onclick=function(){this.disabled=true;api('api/user/refresh',{body:{}}).then(function(r){toast('已更新 '+r.refreshed+' 位');go('friends')}).catch(function(e){toast(e.message)})}})}
+
+function userSheet(id){api('api/user?id='+encodeURIComponent(id)).then(function(r){var u=r.user||{id:id};
+ var m=document.createElement('div');m.className='modal';
+ m.innerHTML='<div class="sheet"><div class="row">'+av(u,56)+'<div class="grow"><div class="name" style="font-size:18px">'+esc(u.name||'(未知)')+'</div><div>'+statusTag(u)+'</div></div><button class="btn ghost sm" id="x">關閉</button></div>'
+ +'<dl class="kv" style="margin:14px 0"><dt>加入時間</dt><dd>'+fmt(u.followedAt)+'</dd><dt>取消／封鎖</dt><dd>'+fmt(u.unfollowedAt)+'</dd><dt>最後互動</dt><dd>'+fmt(u.lastSeen)+'</dd><dt>查詢次數</dt><dd>'+(u.msgs||0)+'</dd><dt>語言</dt><dd>'+esc(u.lang||'—')+'</dd><dt>狀態消息</dt><dd>'+esc(u.statusMessage||'—')+'</dd><dt>userId</dt><dd><code>'+esc(u.id)+'</code></dd></dl>'
+ +'<div class="row wrap"><button class="btn '+(u.blocked?'blue':'red')+' sm" id="blk">'+(u.blocked?'恢復回覆':'停用（機器人不再回覆）')+'</button></div>'
+ +'<h3 style="margin-top:16px">傳一則訊息給他</h3><textarea id="pm" placeholder="只有目前是好友的人收得到；會消耗你的 LINE 推播額度" style="min-height:70px"></textarea><button class="btn sm" id="ps" style="margin-top:8px">傳送</button>'
+ +'<h3 style="margin-top:16px">最近紀錄</h3><div class="feed">'+(r.events.length?r.events.map(evHtml).join(''):'<p class="muted">沒有紀錄。</p>')+'</div></div>';
+ document.body.appendChild(m);m.onclick=function(e){if(e.target===m)m.remove()};$('#x',m).onclick=function(){m.remove()};
+ $('#blk',m).onclick=function(){api('api/user/block',{body:{id:u.id,block:!u.blocked}}).then(function(){toast('已更新');m.remove();go(state.tab)}).catch(function(e){toast(e.message)})};
+ $('#ps',m).onclick=function(){var t=$('#pm',m).value.trim();if(!t)return;if(!confirm('確定傳送給 '+(u.name||u.id)+'？'))return;api('api/push',{body:{to:u.id,text:t}}).then(function(){toast('已傳送');$('#pm',m).value=''}).catch(function(e){toast(e.message)})}})}
+
+function evIcon(t){return {follow:'➕',refollow:'🔁',unfollow:'➖',join:'📥',leave:'📤',message:'💬',memberJoined:'🙋',memberLeft:'👋',admin_block:'⛔',admin_unblock:'✅',admin_broadcast:'📣',admin_push:'✉️'}[t]||'•'}
+function evHtml(e){var who=e.name||e.uid||e.gid||'';var tx='';
+ if(e.type==='message')tx='<b>'+esc(e.text||'')+'</b> <span class="tag" style="color:'+(KCOL[e.kind]||'#8fa0bd')+'">'+(KIND[e.kind]||e.kind||'')+'</span>'+(e.ms?' <span class="muted">'+e.ms+'ms</span>':'')+(e.ok===false?' <span class="tag blocked">失敗</span>':'');
+ else tx=({follow:'新好友 ',refollow:'重新加入 ',unfollow:'封鎖／退出 ',join:'加入群組 ',leave:'退出群組 ',memberJoined:'群組新成員 ',memberLeft:'群組成員離開 ',admin_block:'後台停用 ',admin_unblock:'後台恢復 ',admin_broadcast:'後台廣播：',admin_push:'後台私訊：'}[e.type]||esc(e.type)+' ')+'<b>'+esc(e.text||who)+'</b>';
+ return '<div class="ev"><div class="ic">'+evIcon(e.type)+'</div><div class="grow"><div class="tx">'+tx+'</div><div class="muted">'+fmt(e.t)+' · '+ago(e.t)+(e.gid?' · 群組':'')+'</div></div></div>'}
+
+var actType='';
+function vActivity(){return api('api/events?limit=150&type='+actType).then(function(r){
+ var types=[['','全部'],['message','查詢'],['follow','新好友'],['unfollow','退出'],['join','入群'],['leave','退群']];
+ view.innerHTML='<h2>即時動態</h2><div class="chips">'+types.map(function(c){return '<span class="chip '+(actType===c[0]?'on':'')+'" data-t="'+c[0]+'">'+c[1]+'</span>'}).join('')+'</div><div class="card feed">'+(r.events.length?r.events.map(evHtml).join(''):'<p class="muted">還沒有紀錄。</p>')+'</div>';
+ document.querySelectorAll('.chip').forEach(function(c){c.onclick=function(){actType=c.dataset.t;go('activity')}})})}
+
+function vGroups(){return api('api/groups').then(function(r){
+ view.innerHTML='<h2>群組 <span class="muted">共 '+r.groups.length+' 個</span></h2><div class="card list">'+(r.groups.length?r.groups.map(function(g){return '<div class="it" style="cursor:default">'+av(g)+'<div class="grow"><div class="row" style="gap:8px"><span class="name">'+esc(g.name||'(未知)')+'</span><span class="tag '+(g.status==='left'?'unfollowed':'friend')+'">'+(g.status==='left'?'已退出':'在群組中')+'</span></div><div class="muted">'+(g.members?g.members+' 人 · ':'')+'查詢 '+(g.msgs||0)+' 次 · 最後互動 '+ago(g.lastMsg)+' · 加入 '+fmt(g.joinedAt)+'</div></div></div>'}).join(''):'<p class="muted">機器人還沒有被加進任何群組。</p>')+'</div>'})}
+
+function vInsights(){return api('api/keywords').then(function(r){var max=r.top.length?r.top[0].n:1;
+ view.innerHTML='<h2>查詢分析</h2><div class="two"><div class="card"><h3>熱門查詢</h3>'+(r.top.length?r.top.map(function(k,i){return '<div style="margin:9px 0"><div class="row"><span class="muted" style="width:22px">'+(i+1)+'</span><span class="grow name">'+esc(k.text)+'</span><b>'+k.n+'</b></div><div class="bar"><i style="width:'+Math.round(k.n/max*100)+'%"></i></div></div>'}).join(''):'<p class="muted">還沒有資料。</p>')+'</div>'
+ +'<div class="card"><h3>機器人看不懂的輸入（可據此補別名）</h3>'+(r.unknown.length?r.unknown.map(function(k){return '<div class="ev"><div class="ic">❓</div><div class="grow"><div class="tx"><b>'+esc(k.text)+'</b></div><div class="muted">'+ago(k.t)+'</div></div></div>'}).join(''):'<p class="muted">太好了，目前沒有。</p>')+'</div></div>'})}
+
+function sc(ok,t){return '<span class="dot '+(ok===true?'ok':ok===false?'bad':'warn')+'"></span> '+t}
+function vSystem(){return api('api/health').then(function(h){
+ var l=h.line,d=h.data,q=l.quota||{},used=l.used,pct=(q.value&&used!=null)?Math.min(100,Math.round(used/q.value*100)):null;
+ var html='<h2>系統狀態</h2><div class="grid g2">'
+ +'<div class="card"><h3>LINE 帳號</h3><dl class="kv"><dt>連線</dt><dd>'+sc(l.ok,l.ok?'正常':'異常 '+esc(l.error||''))+'</dd><dt>名稱</dt><dd>'+esc(l.name||'—')+'</dd><dt>Basic ID</dt><dd>'+esc(l.basicId||'—')+'</dd><dt>Webhook</dt><dd>'+(l.webhook?sc(l.webhook.active,esc(l.webhook.endpoint||'')):'—')+'</dd><dt>聊天模式</dt><dd>'+esc(l.chatMode||'—')+'</dd><dt>訊息額度</dt><dd>'+(q.type?(q.type==='none'?'無上限':q.value+' 則／月（'+q.type+'）'):'—')+'</dd><dt>本月已用</dt><dd>'+(used!=null?used+' 則':'—')+'</dd></dl>'+(pct!=null?'<div class="bar" style="margin-top:10px"><i style="width:'+pct+'%"></i></div>':'')+'</div>'
+ +'<div class="card"><h3>資料庫／主機</h3><dl class="kv"><dt>資料庫</dt><dd>'+sc(h.store.enabled?h.store.ok:null,h.store.enabled?(h.store.ok?'Upstash Redis 正常':'連線失敗'):'未連接（記憶體模式）')+'</dd><dt>後台密碼</dt><dd>'+sc(h.runtime.adminSet,h.runtime.adminSet?'已設定':'未設定')+'</dd><dt>LINE Token</dt><dd>'+sc(h.runtime.tokenSet,h.runtime.tokenSet?'已設定':'未設定')+'</dd><dt>環境</dt><dd>'+esc(h.runtime.env)+' '+esc(h.runtime.region)+'</dd><dt>Node</dt><dd>'+esc(h.runtime.node)+'</dd><dt>GitHub</dt><dd>'+esc(h.runtime.repo||'—')+'</dd></dl></div></div>'
+ +'<div class="card"><h3>資料新鮮度（每 6 小時自動更新）</h3><dl class="kv"><dt>賽事配置</dt><dd>'+d.combos.count+' 筆 · 推薦 '+d.combos.recommended+' 顆 · 更新 '+(d.combos.updatedAt?ago(d.combos.updatedAt):'—')+'</dd><dt>T 表</dt><dd>'+esc(d.tier.title||'—')+'（'+esc(d.tier.author||'')+'，'+esc(d.tier.updated||'')+'）'+d.tier.cards+' 張</dd><dt>雙北賽事</dt><dd>'+d.events.count+' 場 · 更新 '+esc(d.events.updatedAt||'—')+'</dd><dt>零件字典</dt><dd>戰刃 '+d.dictionary.blades+' · 軸心 '+d.dictionary.bits+' · 固鎖 '+d.dictionary.ratchets+' · CX '+d.dictionary.cx+'</dd></dl></div>'
+ +'<div class="card"><h3>自動更新排程（GitHub Actions）</h3>'+(h.actions?'<table><tr><th>時間</th><th>結果</th><th>觸發</th></tr>'+h.actions.map(function(a){var ok=a.conclusion==='success';return '<tr><td><a href="'+esc(a.url)+'" target="_blank" rel="noopener">'+fmt(a.at)+'</a></td><td>'+sc(a.status==='completed'?ok:null,a.status==='completed'?(ok?'成功':esc(a.conclusion)):'執行中')+'</td><td>'+esc(a.event)+'</td></tr>'}).join('')+'</table>':'<p class="muted">無法取得（需設定 GITHUB_REPO 環境變數）。</p>')+'</div>';
+ html+='<div class="card"><h3>最近錯誤</h3><div id="errs"><p class="muted">載入中…</p></div></div>';
+ view.innerHTML=html;
+ api('api/errors').then(function(r){$('#errs').innerHTML=r.errors.length?r.errors.map(function(e){return '<div class="ev"><div class="ic">⚠️</div><div class="grow"><div class="tx"><b>'+esc(e.where)+'</b> '+esc(e.message)+'</div><div class="muted">'+fmt(e.t)+'</div></div></div>'}).join(''):'<p class="muted">沒有錯誤紀錄。</p>'})})}
+
+function vTools(){return Promise.all([api('api/config'),api('api/health'),api('api/richmenu').catch(function(e){return {error:e.message}})]).then(function(rs){var c=rs[0].config,h=rs[1],rm=rs[2];
+ var repo=h.runtime.repo;
+ var html='<h2>工具</h2>'
+ +'<div class="card"><h3>🔎 查詢測試（模擬使用者輸入，不會傳到 LINE）</h3><div class="row"><input type="text" id="tq" placeholder="例如：鯊魚配置、T表、本週賽事"><button class="btn" id="tgo">測試</button></div><div id="tout"></div></div>'
+ +'<div class="card"><h3>📣 廣播（傳給所有好友）</h3><div class="warn" style="margin:8px 0">會消耗 LINE 推播額度（輕用量方案每月有限）。目前本月已用 '+(h.line.used!=null?h.line.used:'—')+' 則，額度 '+(h.line.quota&&h.line.quota.type?(h.line.quota.type==='none'?'無上限':h.line.quota.value):'—')+'。</div><textarea id="bc" placeholder="輸入要廣播的內容"></textarea><label class="sw" style="margin:8px 0"><input type="checkbox" id="bcok"> 我確認要傳給所有好友</label><button class="btn red" id="bcgo">送出廣播</button></div>'
+ +'<div class="card"><h3>⚙️ 機器人設定</h3><label class="sw"><input type="checkbox" id="mt" '+(c.maintenance==='1'?'checked':'')+'> 維護模式（所有查詢改回維護訊息）</label><input type="text" id="mtm" placeholder="維護訊息" value="'+esc(c.maintenance_msg||'')+'" style="margin:8px 0"><h3 style="margin-top:12px">新好友歡迎詞（留空 = 使用預設卡片）</h3><textarea id="wl" placeholder="新好友加入時傳送的文字">'+esc(c.welcome||'')+'</textarea><button class="btn" id="cfgsave" style="margin-top:8px">儲存設定</button></div>'
+ +'<div class="card"><h3>🗂 LINE 圖文選單</h3>'+(rm.error?'<p class="muted">'+esc(rm.error)+'</p>':'<p class="muted">目前預設選單：'+(rm.defaultId?'<code>'+esc(rm.defaultId)+'</code>':'尚未設定')+'（共 '+rm.menus.length+' 個）</p>'+(repo?'<img src="https://raw.githubusercontent.com/'+esc(repo)+'/main/assets/richmenu.jpg" alt="選單預覽" style="width:100%;max-width:560px;border-radius:12px;border:1px solid var(--line)">':'')+'<p class="muted">按鈕：'+rm.spec.areas.map(function(a){return esc(a.action.text)}).join('、')+'</p><div class="row wrap"><button class="btn" id="rmmk">建立／更新並設為預設</button>'+(rm.defaultId?'<button class="btn ghost" id="rmdel">移除預設選單</button>':'')+'</div><p class="muted">想換圖：把新圖（2500×1686、≤1MB）放到 <code>assets/richmenu.jpg</code> 推上 GitHub，部署後再按「建立／更新」。</p>')+'</div>'
+ +'<div class="card"><h3>🧹 紀錄管理</h3><div class="row wrap"><a class="btn ghost sm" href="/admin/api/export/users">匯出好友 CSV</a><button class="btn ghost sm" data-clr="events">清除事件紀錄</button><button class="btn ghost sm" data-clr="unknown">清除未辨識輸入</button><button class="btn ghost sm" data-clr="keywords">清除熱門查詢</button><button class="btn ghost sm" data-clr="errors">清除錯誤紀錄</button></div></div>';
+ view.innerHTML=html;
+ function run(){var t=$('#tq').value.trim();if(!t)return;api('api/test',{body:{text:t}}).then(function(r){$('#tout').innerHTML='<p class="muted">分類：<b>'+esc(KIND[r.kind]||r.kind)+'</b>'+(r.hasFlex?' · 會以卡片呈現':'')+(r.image?' · 會回傳圖片':'')+'</p><pre>'+esc(r.text)+'</pre><p class="muted">快速按鈕：'+esc(r.quick.join('、'))+'</p>'}).catch(function(e){toast(e.message)})}
+ $('#tgo').onclick=run;$('#tq').onkeydown=function(e){if(e.key==='Enter')run()};
+ $('#bcgo').onclick=function(){var t=$('#bc').value.trim();if(!t)return toast('請輸入內容');if(!$('#bcok').checked)return toast('請先勾選確認');if(!confirm('再確認一次：要傳給所有好友嗎？'))return;api('api/broadcast',{body:{text:t,confirm:true}}).then(function(){toast('已送出');$('#bc').value='';$('#bcok').checked=false}).catch(function(e){toast(e.message)})};
+ $('#cfgsave').onclick=function(){api('api/config',{body:{maintenance:$('#mt').checked?'1':'',maintenance_msg:$('#mtm').value,welcome:$('#wl').value}}).then(function(){toast('已儲存')}).catch(function(e){toast(e.message)})};
+ if($('#rmmk'))$('#rmmk').onclick=function(){this.disabled=true;api('api/richmenu/create',{body:{}}).then(function(){toast('選單已更新並設為預設');go('tools')}).catch(function(e){toast(e.message);go('tools')})};
+ if($('#rmdel'))$('#rmdel').onclick=function(){if(!confirm('移除後好友將看不到圖文選單，確定？'))return;api('api/richmenu/delete',{body:{id:rm.defaultId}}).then(function(){toast('已移除');go('tools')}).catch(function(e){toast(e.message)})};
+ document.querySelectorAll('[data-clr]').forEach(function(b){b.onclick=function(){if(!confirm('確定清除？無法復原'))return;api('api/logs/clear',{body:{what:b.dataset.clr}}).then(function(){toast('已清除')}).catch(function(e){toast(e.message)})}})})}
+
+function status(){api('api/health').then(function(h){var ok=h.line.ok&&(!h.store.enabled||h.store.ok);$('#statusDot').className='dot '+(ok?'ok':'bad');$('#statusText').textContent=ok?'運作中':'有異常'}).catch(function(){})}
+
+api('api/overview').then(function(){showApp();status()}).catch(function(e){if(e.message!=='unauthorized'&&/ADMIN_PASSWORD/.test(e.message)){document.body.innerHTML='<div class="login"><div class="card"><div class="logo"><div class="mark">螺</div><div><b>後台尚未啟用</b></div></div><p>'+esc(e.message)+'</p></div></div>'}else showLogin()});
+})();
+</script>
+</body>
+</html>
