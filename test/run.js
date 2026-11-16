@@ -68,6 +68,21 @@ ok('UX-01 → Dran Buster', p('ux-01解釋').parts[0].ids[0] === 'dran_buster');
 ok('魔導幻箭 / 騎士重盾 / 雄獅獵爪', ['魔導幻箭', '騎士重盾', '雄獅獵爪'].every((t) => p(t + '解釋').parts.length === 1));
 ok('未收錄解析的戰刃有回覆', /Samurai Calibur/.test(run('BX-45 解釋')));
 
+console.log('— 社群站資料（編號 / 全零件）');
+ok('BX-14 → Shark Edge', p('BX-14配置').parts[0].ids[0] === 'shark_edge');
+ok('UX-15 → Shark Scale', p('ux15解釋').parts[0].ids[0] === 'shark_scale');
+ok('BX-53 → 兩顆 2.0', p('BX-53 解釋').parts[0].ids.length === 2);
+ok('M-65 固鎖輪', p('M-65 解釋').ratchets[0] === 'M-65');
+ok('3-85 固鎖輪', p('3-85配置').ratchets[0] === '3-85');
+ok('BX-55 不會被當成固鎖輪', p('BX-55解釋').ratchets.length === 0 && p('BX-55解釋').parts[0].ids[0] === 'horus_shatter');
+ok('新軸心 RA', p('RA軸解釋').parts[0].ids[0] === 'RA');
+ok('聯名 鋼鐵人', p('鋼鐵人解釋').parts[0].ids[0] === 'ironman');
+const w = run('BX-14 解釋');
+console.log(w);
+ok('解釋含【資料】編號', /【資料】編號 BX-14・右旋/.test(w));
+ok('左旋戰刃註記', /左旋/.test(run('蒼穹龍騎士解釋')));
+ok('一體戰刃註記', /一體成型/.test(run('UX-19 解釋')));
+
 console.log('— 簽名驗證');
 const { validSignature } = require('../api/webhook');
 const body = Buffer.from('{"events":[]}');

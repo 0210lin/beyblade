@@ -56,7 +56,7 @@ class Matcher:
     def __init__(self, dictionary: dict):
         self.blades = dictionary["blades"]                       # id -> {zh,en,aliases}
         self.bit_full = {k.lower(): v for k, v in dictionary["bit_full_names"].items()}
-        self.bit_abbr = set(dictionary["bits"].keys())
+        self.bit_abbr = {k.upper(): k for k in dictionary["bits"]}  # NR -> Nr
         # blade 英文名 → id（空白可有可無；多個同名取第一個）
         pats = []
         self.blade_lookup: dict[str, str] = {}
@@ -66,7 +66,7 @@ class Matcher:
             pats.append(r"\s*".join(re.escape(w) for w in b["en"].split()))
         pats.sort(key=len, reverse=True)
         self.combo_re = re.compile(
-            r"(?P<blade>" + "|".join(pats) + r")[\s:\-]*(?P<ratchet>\d)\s*[-–]\s*(?P<h>60|70|80)(?!\d)(?P<rest>[^\n]{0,24})",
+            r"(?P<blade>" + "|".join(pats) + r")[\s:\-]*(?P<ratchet>\d|M)\s*[-–]\s*(?P<h>50|55|60|65|70|80|85)(?!\d)(?P<rest>[^\n]{0,24})",
             re.I,
         )
         self.full_names_sorted = sorted(self.bit_full, key=len, reverse=True)
@@ -83,8 +83,8 @@ class Matcher:
         if m:
             tok = m.group(1)
             # 中間有空白時，縮寫必須大寫，避免把 "a"、"in" 等英文單字誤判成軸心
-            if (sp == 0 or tok.isupper()) and tok.upper() in self.bit_abbr:
-                return tok.upper(), sp + len(tok)
+            if (sp == 0 or tok[0].isupper()) and tok.upper() in self.bit_abbr:
+                return self.bit_abbr[tok.upper()], sp + len(tok)
         return None
 
     def find_combos(self, text: str):
@@ -98,7 +98,7 @@ class Matcher:
             bid = self.blade_lookup.get(blade_key)
             if not bid:
                 continue
-            ratchet = f'{m.group("ratchet")}-{m.group("h")}'
+            ratchet = f'{m.group("ratchet").upper()}-{m.group("h")}'
             line_start = text.rfind("\n", 0, m.start()) + 1
             line_end = text.find("\n", m.end())
             line = text[line_start : line_end if line_end != -1 else len(text)]
