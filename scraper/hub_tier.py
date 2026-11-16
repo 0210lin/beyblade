@@ -22,8 +22,9 @@ BASE = "https://beybladehub.app"
 
 # 預設用哪一份高手 T 表（可自行換成 beybladehub.app/tier 上「高手 T 表」列出的其他連結）
 SOURCES = [
-    "https://beybladehub.app/s/2hncQPPe?t=010e597f-e4cd-4a3e-a29c-f4b8a73b9894",  # 阿土｜9月 台北G1&G1最強陀螺天梯表
+    "https://beybladehub.app/s/4Xuagf8J?t=db140774-4fbe-4df8-9897-fa4e7aae7c3d",  # 維辰孔丘｜10月份T度排行（自動探索失敗時的備用）
 ]
+RANKINGS = BASE + "/tier/rankings"  # 站上列出所有「高手 T 表」的頁面：每天自動挑最新更新的一份
 
 
 def fetch(url: str, timeout: int = 40) -> tuple[str, str]:
@@ -111,8 +112,45 @@ def slim(data: dict) -> dict:
     }
 
 
+def _date_key(updated: str):
+    m = re.search(r"(\d{4})年(\d{1,2})月(\d{1,2})日", updated or "")
+    return tuple(int(x) for x in m.groups()) if m else (0, 0, 0)
+
+
+def discover() -> list[tuple[str, str]]:
+    """從 /tier/rankings 找出所有高手 T 表（連結, 製作者）"""
+    page, _ = fetch(RANKINGS)
+    page = page.replace("<!-- -->", "")
+    out = {}
+    for m in re.finditer(r'href="(/(?:s|t)/[A-Za-z0-9]+\?t=[0-9a-f-]+)"[^>]*></a>(.*?)(?=href="/(?:s|t)/|$)', page, flags=re.S):
+        by = re.search(r"by\s*(?:<a[^>]*>)?\s*([^<↗]+)", m.group(2))
+        out.setdefault(BASE + m.group(1), html.unescape(by.group(1)).strip() if by else "")
+    return list(out.items())
+
+
 def fetch_all(url: str | None = None) -> dict:
-    page, final = fetch(url or SOURCES[0])
+    if url:
+        page, final = fetch(url)
+        return parse(page, final)
+    best = None
+    try:
+        for u, by in discover():
+            try:
+                page, final = fetch(u)
+                d = parse(page, final)
+                if by and d.get("author") in (None, "", "匿名玩家"):
+                    d["author"] = by  # 分享頁沒署名時，用列表頁上的「by 製作者」
+            except Exception:
+                continue
+            if sum(len(r["cards"]) for r in d.get("rows", [])) < 20:
+                continue
+            if best is None or _date_key(d.get("updated")) > _date_key(best.get("updated")):
+                best = d  # 更新日期最新的一份
+    except Exception:
+        pass
+    if best:
+        return best
+    page, final = fetch(SOURCES[0])
     return parse(page, final)
 
 

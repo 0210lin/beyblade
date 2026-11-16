@@ -137,6 +137,13 @@ ok('只有推薦沒有賽果的零件也能回覆', /社群推薦/.test(run('鋒
 ok('G3／民間賽事有選手欄位', data.combos.some((c) => c.player));
 ok('同一場賽事不重複列兩次', (() => { const t = run('鯊魚配置'); return (t.match(/高雄夢時代/g) || []).length === 1; })());
 
+console.log('— 零件圖鑑同步（自動新增零件也能查）');
+const { dict: D2 } = require('../lib/engine');
+ok('每顆戰刃都有類型與旋向', Object.entries(D2.blades).every(([id, b]) => b.type || id === 'dran_brave'));
+ok('每顆戰刃「解釋」都能回覆', Object.values(D2.blades).slice(0, 200).every((b) => /【核心功能】/.test(run(`${b.zh}解釋`)) || /【核心功能】/.test(run(`${b.code || b.en}解釋`))));
+ok('每種軸心都能回覆解釋', Object.keys(D2.bits).every((k) => /【核心功能】/.test(run(`${k}軸解釋`))));
+ok('固鎖資料有類型與高度', Object.values(D2.ratchets).every((r) => r.type && r.height));
+
 console.log('— CX 系列');
 const cxIds = (t) => p(t).parts.filter((x) => x.kind === 'cx').flatMap((x) => x.ids);
 ok('J輔助 → assist_j', cxIds('J輔助解釋')[0] === 'assist_j');

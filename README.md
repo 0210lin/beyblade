@@ -91,6 +91,18 @@
 
 **賽事資料**：`combos.json` 目前來自 `data/manual_results.txt`（取自台灣社群站 beybladehub.app 的極限盃 G1 等賽事頁，每筆都有賽事連結與組別／名次）。想新增賽事，照該檔的格式貼一個區塊再 push，下次排程（或手動 Run workflow）就會併入。機器人回覆採 LINE Flex 卡片：熱門配置 + 最近得名賽事，點賽事區塊直接開連結；Flex 被 LINE 拒絕時會自動退回純文字。
 
+## 資料自動同步總覽（GitHub Actions 每 6 小時，一天 4 次）
+
+| 資料 | 來源 | 程式 |
+|---|---|---|
+| 零件圖鑑：戰刃／固鎖／軸心／輔助戰刃、新零件自動建檔、發售日、新 CX 商品 | beybladehub.app/parts/* | `scraper/hub_parts.py` → `data/dictionary.json` |
+| 賽場配置、社群推薦配置 | beybladehub.app/combos | `scraper/hub_combos.py` → `data/combos.json` |
+| 高手 T 表（自動挑網站上最新更新的一份）＋ 圖片 | beybladehub.app/tier/rankings | `scraper/hub_tier.py`、`make_tier_image.py` → `data/tier_pro.json`、`data/tier.jpg` |
+| 雙北賽事 | beybladehub.app/events | `scraper/hub_events.py` → `data/events.json` |
+| FB 社團賽事、手動賽果 | 人工整理 | `scraper/build_events.py` 的 `FB_EVENTS`、`data/manual_results.txt` |
+
+任何一項抓失敗或解析結果異常少（頁面改版）時，該項沿用舊資料，不會清空、也不影響其他項目。人工維護的別名、百科文字不會被覆蓋。
+
 ## 配置與 T 表資料
 
 `scraper/hub_combos.py` 每 6 小時解析 https://beybladehub.app/combos：

@@ -30,6 +30,9 @@ jobs:
       - name: Install CJK font (for T-table image)
         run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
 
+      - name: Sync 零件圖鑑 (beybladehub.app/parts)
+        run: python scraper/hub_parts.py
+
       - name: Run scraper
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
@@ -54,10 +57,10 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if [ -n "$(git status --porcelain data/combos.json data/events.json data/tier_pro.json data/tier.jpg data/tier.hash)" ]; then
+          if [ -n "$(git status --porcelain data/dictionary.json data/combos.json data/events.json data/tier_pro.json data/tier.jpg data/tier.hash)" ]; then
             git config user.name  "combo-bot"
             git config user.email "combo-bot@users.noreply.github.com"
-            git add data/combos.json data/events.json data/tier_pro.json data/tier.jpg data/tier.hash
+            git add data/dictionary.json data/combos.json data/events.json data/tier_pro.json data/tier.jpg data/tier.hash
             git commit -m "chore(data): update combos/events $(date -u +'%Y-%m-%d %H:%M UTC')"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push
