@@ -92,7 +92,11 @@
 
 ## 賽事查詢資料（雙北）
 
-`data/events.json` 由 `scraper/build_events.py` 產生：店家／百貨例行賽取自 beybladehub.app/events 的行事曆，另外加上 FB 社團「台灣戰鬥陀螺賽事聚會交流平台」的賽事貼文（含海報圖片內容）。更新方式：編輯 `build_events.py` 內的 `STORES` 或 `FB_EVENTS`，執行 `python scraper/build_events.py`，commit 並 push。FB 沒有公開 API，所以這部分沒有自動排程更新。
+`data/events.json` 由 `scraper/build_events.py` 產生，**GitHub Actions 每 6 小時自動更新**：
+
+- **店家／百貨例行賽**：`scraper/hub_events.py` 直接解析 https://beybladehub.app/events 的比賽場次（每個場館一張卡片），只留台北市、新北市；同一天不同組別各有自己的時間與人數上限。抓失敗或解析結果異常少（頁面改版）時，會沿用上一版資料，不會清空。
+- **FB 社團賽事**（台灣戰鬥陀螺賽事聚會交流平台，含海報圖片內容）：FB 沒有公開 API，沒辦法自動抓，寫在 `build_events.py` 的 `FB_EVENTS`；要新增就編輯該清單、執行 `python scraper/build_events.py`、commit 並 push。
+- 過期的賽事每次更新都會自動移除。
 
 ## 注意事項
 

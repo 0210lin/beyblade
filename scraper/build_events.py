@@ -115,7 +115,7 @@ def map_url(venue: str, address: str) -> str:
     return "https://www.google.com/maps/search/?api=1&query=" + quote(f"{venue} {address}")
 
 
-def main() -> int:
+def static_store_events():
     events = []
     for line in STORES.strip().splitlines():
         name, addr, time, cap, reg, dates = line.split("|")
@@ -126,17 +126,57 @@ def main() -> int:
                 time=time, checkin="", fee="", cap=int(cap), divisions=DIV[div], reg=reg, link="", note="",
                 kind="store", source="beybladehub.app/events", source_url=HUB, map=map_url(name, addr),
             ))
+    return events
+
+
+def main() -> int:
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from hub_events import fetch_hub_events, taipei_today
+
+    today = taipei_today().isoformat()
+    old = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {"events": []}
+
+    # 1) 店家／百貨例行賽：優先即時抓 beybladehub.app/events；失敗就沿用上一版，再不行用檔內靜態資料
+    stores, how = None, ""
+    try:
+        scraped = [e for e in fetch_hub_events() if e["date"] >= today]
+        if len(scraped) >= 20:  # 防呆：解析結果太少 = 頁面改版或抓壞，不採用
+            stores, how = scraped, "即時抓取 beybladehub.app"
+        else:
+            print(f"[warn] 只解析到 {len(scraped)} 場，疑似頁面改版，沿用舊資料", file=sys.stderr)
+    except Exception as e:
+        print(f"[warn] 抓取 beybladehub.app 失敗：{e}", file=sys.stderr)
+    if stores is None:
+        prev = [e for e in old.get("events", []) if e.get("kind") == "store"]
+        stores, how = (prev, "沿用上一版") if prev else (static_store_events(), "檔內靜態資料")
+
+    # 2) FB 社團賽事（人工整理）
+    tournaments = []
     for e in FB_EVENTS:
         e = dict(e)
         e.update(city=city_of(e["address"]), district=district_of(e["address"]), kind="tournament",
                  source="FB 台灣戰鬥陀螺賽事聚會交流平台", source_url=FB_GROUP, map=map_url(e["venue"], e["address"]))
-        events.append(e)
+        tournaments.append(e)
+
+    events = [e for e in stores + tournaments if e["date"] >= today]  # 過期的直接移除
     events.sort(key=lambda e: (e["date"], e["time"], e["name"]))
-    bad = [e for e in events if not e["city"] in ("台北市", "新北市")]
-    assert not bad
-    doc = {"updated_at": "2026-11-17", "note": "只收雙北（台北市、新北市）。店家例行賽取自 beybladehub.app/events；FB 賽事取自社團貼文與海報，皆非官方資料，實際以主辦公告為準。", "events": events}
-    OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"events: {len(events)}  (tournament {sum(e['kind']=='tournament' for e in events)})")
+    assert all(e["city"] in ("台北市", "新北市") for e in events), "只能收雙北"
+    doc = {"updated_at": today, "note": "只收雙北（台北市、新北市）。店家例行賽取自 beybladehub.app/events；FB 賽事取自社團貼文與海報，皆非官方資料，實際以主辦公告為準。", "events": events}
+    new_text = json.dumps(doc, ensure_ascii=False, indent=1) + "\n"
+    # 內容沒變就不重寫（避免排程每次都產生 commit：只有 updated_at 變動不算）
+    try:
+        prev_doc = json.loads(OUT.read_text(encoding="utf-8"))
+        if prev_doc.get("events") == events:
+            print(f"events 沒有變化（{len(events)} 場，{how}）")
+            return 0
+    except Exception:
+        pass
+    OUT.write_text(new_text, encoding="utf-8")
+    print(f"events: {len(events)}（FB 賽事 {len(tournaments)}；{how}）")
     return 0
 
 

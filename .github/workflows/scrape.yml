@@ -33,15 +33,18 @@ jobs:
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
         run: python scraper/scraper.py
 
+      - name: Update 雙北賽事 (beybladehub.app/events)
+        run: python scraper/build_events.py
+
       - name: Commit if changed
         run: |
-          if [ -n "$(git status --porcelain data/combos.json)" ]; then
+          if [ -n "$(git status --porcelain data/combos.json data/events.json)" ]; then
             git config user.name  "combo-bot"
             git config user.email "combo-bot@users.noreply.github.com"
-            git add data/combos.json
-            git commit -m "chore(data): update combos $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git add data/combos.json data/events.json
+            git commit -m "chore(data): update combos/events $(date -u +'%Y-%m-%d %H:%M UTC')"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push
           else
-            echo "combos.json 沒有變更"
+            echo "combos.json / events.json 沒有變更"
           fi
