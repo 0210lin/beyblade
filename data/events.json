@@ -1,29 +1,7 @@
 {
- "updated_at": "2026-11-17",
+ "updated_at": "2026-11-18",
  "note": "只收雙北（台北市、新北市）。店家例行賽取自 beybladehub.app/events；FB 賽事取自社團貼文與海報，皆非官方資料，實際以主辦公告為準。",
  "events": [
-  {
-   "date": "2026-11-17",
-   "name": "夾子園-汐止",
-   "venue": "夾子園-汐止",
-   "address": "新北市汐止區大同路一段122號",
-   "city": "新北市",
-   "district": "汐止區",
-   "time": "19:00",
-   "checkin": "",
-   "fee": "",
-   "cap": 32,
-   "divisions": [
-    "通常組"
-   ],
-   "reg": "可先線上報名，現場有名額也收",
-   "link": "",
-   "note": "",
-   "kind": "store",
-   "source": "beybladehub.app/events",
-   "source_url": "https://beybladehub.app/events",
-   "map": "https://www.google.com/maps/search/?api=1&query=%E5%A4%BE%E5%AD%90%E5%9C%92-%E6%B1%90%E6%AD%A2%20%E6%96%B0%E5%8C%97%E5%B8%82%E6%B1%90%E6%AD%A2%E5%8D%80%E5%A4%A7%E5%90%8C%E8%B7%AF%E4%B8%80%E6%AE%B5122%E8%99%9F"
-  },
   {
    "date": "2026-11-18",
    "name": "夾子園-汐止",
