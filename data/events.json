@@ -1,51 +1,7 @@
 {
- "updated_at": "2026-11-26",
+ "updated_at": "2026-11-27",
  "note": "只收雙北（台北市、新北市）。店家例行賽取自 beybladehub.app/events；FB 賽事取自社團貼文與海報，皆非官方資料，實際以主辦公告為準。",
  "events": [
-  {
-   "date": "2026-11-26",
-   "name": "夾子園-中和K霸",
-   "venue": "夾子園-中和K霸",
-   "address": "新北市中和區中山路二段369號",
-   "city": "新北市",
-   "district": "中和區",
-   "time": "19:00",
-   "checkin": "",
-   "fee": "",
-   "cap": 32,
-   "divisions": [
-    "通常組"
-   ],
-   "reg": "可先線上報名，現場有名額也收",
-   "link": "",
-   "note": "",
-   "kind": "store",
-   "source": "beybladehub.app/events",
-   "source_url": "https://beybladehub.app/events",
-   "map": "https://www.google.com/maps/search/?api=1&query=%E5%A4%BE%E5%AD%90%E5%9C%92-%E4%B8%AD%E5%92%8CK%E9%9C%B8%20%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF%E4%BA%8C%E6%AE%B5369%E8%99%9F"
-  },
-  {
-   "date": "2026-11-26",
-   "name": "蘆洲 - 夾子園",
-   "venue": "蘆洲 - 夾子園",
-   "address": "新北市蘆洲區中山二路290號",
-   "city": "新北市",
-   "district": "蘆洲區",
-   "time": "19:00",
-   "checkin": "",
-   "fee": "",
-   "cap": 32,
-   "divisions": [
-    "通常組"
-   ],
-   "reg": "可先線上報名，現場有名額也收",
-   "link": "",
-   "note": "",
-   "kind": "store",
-   "source": "beybladehub.app/events",
-   "source_url": "https://beybladehub.app/events",
-   "map": "https://www.google.com/maps/search/?api=1&query=%E8%98%86%E6%B4%B2%20-%20%E5%A4%BE%E5%AD%90%E5%9C%92%20%E6%96%B0%E5%8C%97%E5%B8%82%E8%98%86%E6%B4%B2%E5%8D%80%E4%B8%AD%E5%B1%B1%E4%BA%8C%E8%B7%AF290%E8%99%9F"
-  },
   {
    "date": "2026-11-27",
    "name": "萬華 - 夾子園",
