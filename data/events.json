@@ -1,29 +1,7 @@
 {
- "updated_at": "2026-11-27",
+ "updated_at": "2026-11-28",
  "note": "只收雙北（台北市、新北市）。店家例行賽取自 beybladehub.app/events；FB 賽事取自社團貼文與海報，皆非官方資料，實際以主辦公告為準。",
  "events": [
-  {
-   "date": "2026-11-27",
-   "name": "萬華 - 夾子園",
-   "venue": "萬華 - 夾子園",
-   "address": "台北市萬華區艋舺大道101號",
-   "city": "台北市",
-   "district": "萬華區",
-   "time": "19:00",
-   "checkin": "",
-   "fee": "",
-   "cap": 32,
-   "divisions": [
-    "公開組"
-   ],
-   "reg": "可先線上報名，現場有名額也收",
-   "link": "",
-   "note": "",
-   "kind": "store",
-   "source": "beybladehub.app/events",
-   "source_url": "https://beybladehub.app/events",
-   "map": "https://www.google.com/maps/search/?api=1&query=%E8%90%AC%E8%8F%AF%20-%20%E5%A4%BE%E5%AD%90%E5%9C%92%20%E5%8F%B0%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E8%89%8B%E8%88%BA%E5%A4%A7%E9%81%93101%E8%99%9F"
-  },
   {
    "date": "2026-11-28",
    "name": "CardMaster",
